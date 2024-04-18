@@ -8,13 +8,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Pickup
+  - Ground
+  - Trees
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3771169429
+    locked: 0
+  - name: Ground
+    uniqueID: 834553589
+    locked: 0
+  - name: Pickup
+    uniqueID: 528013367
+    locked: 0
+  - name: Player
+    uniqueID: 2129182465
+    locked: 0
+  - name: Trees
+    uniqueID: 2708816147
     locked: 0
