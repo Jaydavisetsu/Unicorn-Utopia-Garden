@@ -28,7 +28,7 @@ public class CharacterController2D : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //Assign the values to the motion vector based on the horizontal adn vertical axis input.
+        //Assign the values to the motion vector based on the horizontal and vertical axis input.
         motionVector = new Vector2(
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical"));
