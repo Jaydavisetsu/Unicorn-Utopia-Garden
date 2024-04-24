@@ -15,7 +15,6 @@ public class InputManager : MonoBehaviour
     //Input action variable.
     private InputAction MoveAction;
 
-    //
     private void Awake()
     {
         //Grabbing the reference.
