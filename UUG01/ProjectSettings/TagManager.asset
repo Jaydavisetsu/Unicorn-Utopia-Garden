@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Audio
+  - Trees
+  - Manager
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - Pickup
   - Ground
   - Trees
-  - 
+  - Animals
   - 
   - 
   - 
@@ -47,8 +50,14 @@ TagManager:
   - name: Ground
     uniqueID: 834553589
     locked: 0
+  - name: Water
+    uniqueID: 217077349
+    locked: 0
   - name: Pickup
     uniqueID: 528013367
+    locked: 0
+  - name: Animals
+    uniqueID: 1124408671
     locked: 0
   - name: Player
     uniqueID: 2129182465
