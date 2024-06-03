@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
     //The move speed for the character.
     [SerializeField] private float MoveSpeed = 5f;
     private Vector2 Movementm;
     private Rigidbody2D Rigidbody;
-
     private Animator Animator;
 
     //Good practice of setting up constant strings for animation parameters.
@@ -25,10 +24,19 @@ public class PlayerMovement : MonoBehaviour
         Animator = GetComponent<Animator>();
     }
 
+    public void LoadData(GameData data) //Method from IDataPersistence.
+    {
+        this.transform.position = data.PlayerPosition;
+    }
+
+    public void SaveData(GameData data) //Method from IDataPersistence.
+    {
+        data.PlayerPosition = this.transform.position;
+    }
+
     private void Update()
     {
-        //Moving vecotr2
-        Movementm.Set(InputManager.Movement.x, InputManager.Movement.y);
+        Movementm.Set(InputManager.Movement.x, InputManager.Movement.y); //Moving vecotr2.
 
         //Setting the velocity directly on the rigid body.
         Rigidbody.velocity = Movementm * MoveSpeed; //Telling it what speed to be at and it will be the same regardless of the frame rate.
@@ -44,4 +52,5 @@ public class PlayerMovement : MonoBehaviour
     }
 }
 
-//Source: https://www.youtube.com/watch?v=RN3yuCvazL4&list=LL&index=8
+//Source for everything except load and save: https://www.youtube.com/watch?v=RN3yuCvazL4&list=LL&index=8
+//Source for load and save: https://www.youtube.com/watch?v=aUi9aijvpgs&list=PL3viUl9h9k7-ucrHVH1fpirA63WYEgo4-&index=15
