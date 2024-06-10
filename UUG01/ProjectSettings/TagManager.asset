@@ -15,10 +15,9 @@ TagManager:
   - Water
   - UI
   - Background
-  - Pickup
-  - Ground
   - Trees
   - Animals
+  - Foreground
   - Bounds
   - 
   - 
@@ -40,31 +39,23 @@ TagManager:
   - 
   - 
   - 
+  - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: Background
+    uniqueID: 834553589
     locked: 0
   - name: Foreground
     uniqueID: 3771169429
     locked: 0
-  - name: Ground
-    uniqueID: 834553589
-    locked: 0
-  - name: Water
-    uniqueID: 217077349
-    locked: 0
-  - name: Pickup
-    uniqueID: 528013367
-    locked: 0
-  - name: Animals
-    uniqueID: 1124408671
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 2129182465
     locked: 0
+  - name: Animals
+    uniqueID: 1124408671
+    locked: 0
   - name: Trees
     uniqueID: 2708816147
-    locked: 0
-  - name: Bounds
-    uniqueID: 818732903
     locked: 0
