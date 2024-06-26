@@ -5,12 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    //Connecting the funcition to the buttons as an event funtion.
-    [SerializeField] GameObject PauseMenuu;
+    //Connecting the function to the buttons as an event funtion.
+    [SerializeField] private GameObject PauseMenuu;
+
+    void Start()
+    {
+        if (PauseMenuu == null)
+        {
+            Debug.LogError("PauseMenuu is not assigned in the Inspector at Start.");
+        }
+        else
+        {
+            Debug.Log("PauseMenuu is correctly assigned in the Inspector.");
+        }
+    }
 
     public void Pause()
     {
-        PauseMenuu.SetActive(true); //When pause button is clicked, it will active pause menu.
+        if (PauseMenuu == null)
+        {
+            Debug.LogError("PauseMenuu is not assigned in the Inspector during Pause.");
+            return;
+        }
+
+        PauseMenuu.SetActive(true); //When pause button is clicked, it will activate pause menu.
         Time.timeScale = 0; //Pausing the real time game.
     }
 
