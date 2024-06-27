@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -62,6 +63,16 @@ public class MovingNPC : MonoBehaviour
         // Choose whether to move sideways or up/down
         currentMoveDirection = Mathf.FloorToInt(Random.Range(0, moveDirections.Length));
 
+        if (moveDirections[currentMoveDirection] == Vector3.zero)
+        {
+            //Choose random idle animation
+            int randomIdleAnimation = Random.Range(1, 4);
+
+            animator.Play("IdleAnimation" + randomIdleAnimation);
+
+            decisionTimeCount = 5;
+        }
 
     }
 }
+
