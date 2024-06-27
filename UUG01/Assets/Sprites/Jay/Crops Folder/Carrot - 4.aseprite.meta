@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 575b2716358e6d34ea74dec95b02534b
+guid: 348853e493ddc7d4db77dd36c2105dee
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638549212968341685
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: New map sheet_Frame_0
+  - name: Carrot - 4
     originalName: 
-    pivot: {x: 0.51282054, y: -0.08252427}
+    pivot: {x: 0.44444445, y: -0.44444445}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 117
-      height: 206
-    spriteID: c0977107ef2cfa24189b878aad066d91
+      width: 9
+      height: 9
+    spriteID: a869d55fef6726246b7edf123ca9fff8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,54 +139,62 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  - name: New map sheet_Frame_1
-    originalName: 
-    pivot: {x: 0, y: 0}
-    alignment: 9
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 218
-      width: 0
-      height: 0
-    spriteID: a9fee03bf57b7c34782609e5d6579513
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: -116, y: 98}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1746990509
-    name: New map sheet
+    guid: -1506320294
+    name: Carrot - 4
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: New map sheet_Frame_0
+    - name: Carrot - 4
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 17
-        width: 117
-        height: 206
-      spriteId: c0977107ef2cfa24189b878aad066d91
-    - name: New map sheet_Frame_1
-      frameIndex: 1
-      cellRect:
-        x: 0
-        y: 90
-        width: 120
-        height: 120
-      spriteId: a9fee03bf57b7c34782609e5d6579513
+        x: 4
+        y: 4
+        width: 9
+        height: 9
+      spriteId: a869d55fef6726246b7edf123ca9fff8
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 120, y: 300}
+  canvasSize: {x: 16, y: 16}
