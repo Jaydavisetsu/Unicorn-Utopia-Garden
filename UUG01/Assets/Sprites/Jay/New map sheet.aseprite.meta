@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: 575b2716358e6d34ea74dec95b02534b
-=======
-guid: 3a0014244b417d44e949968f7553d8a7
->>>>>>> Stashed changes
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -39,11 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< Updated upstream
-    spritePixelsToUnits: 16
-=======
     spritePixelsToUnits: 100
->>>>>>> Stashed changes
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -79,11 +71,7 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-<<<<<<< Updated upstream
-    fileImportMode: 0
-=======
     fileImportMode: 1
->>>>>>> Stashed changes
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -95,11 +83,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
-<<<<<<< Updated upstream
-    fileImportMode: 0
-=======
     fileImportMode: 1
->>>>>>> Stashed changes
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
@@ -111,11 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-<<<<<<< Updated upstream
-  platformSettingsDirtyTick: 638548333143176574
-=======
   platformSettingsDirtyTick: 0
->>>>>>> Stashed changes
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -150,11 +130,7 @@ ScriptedImporter:
       y: 4
       width: 117
       height: 206
-<<<<<<< Updated upstream
-    spriteID: 79c6645381a0b354db696b648d4f88e1
-=======
-    spriteID: d1bc3e8cf5dec0547a69581ee739f956
->>>>>>> Stashed changes
+    spriteID: c0977107ef2cfa24189b878aad066d91
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -174,11 +150,7 @@ ScriptedImporter:
       y: 218
       width: 0
       height: 0
-<<<<<<< Updated upstream
-    spriteID: 6792e0e3c5a8c064482c37014dc00228
-=======
-    spriteID: 420af6c1e03a88c489e46c5e2a5a1aaf
->>>>>>> Stashed changes
+    spriteID: a9fee03bf57b7c34782609e5d6579513
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -187,371 +159,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: -116, y: 98}
-<<<<<<< Updated upstream
-  spriteSheetImportData:
-  - name: New map sheet_0
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 192
-      width: 16
-      height: 17
-    spriteID: b77bed22d9601ca429cffdd0ed4bc863
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 28
-      y: 192
-      width: 19
-      height: 17
-    spriteID: 25b49553676486c42a1afcaba32eaa35
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 53
-      y: 193
-      width: 24
-      height: 17
-    spriteID: 3260eacdcd949344eb7958e68d7ba1c3
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 83
-      y: 193
-      width: 30
-      height: 17
-    spriteID: 1263ea3772bc1d944b4e7ce09c905a5c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_4
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 171
-      width: 40
-      height: 17
-    spriteID: c460c271cbb62be4c85e267e61ba35aa
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_5
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 51
-      y: 171
-      width: 50
-      height: 17
-    spriteID: 8e1ede9824dbf6a418be909220ce5ba2
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_6
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 151
-      width: 60
-      height: 17
-    spriteID: a59385b1eb98912498ee322d6fce00da
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_7
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 132
-      width: 73
-      height: 17
-    spriteID: 7bdc1c83c80774646be1a2243ec83578
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_8
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 6
-      y: 111
-      width: 85
-      height: 17
-    spriteID: 1feb9d3d020937d47b223dd18719fd46
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_9
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 90
-      width: 85
-      height: 17
-    spriteID: 02a2db14f74e7c54993ee45f0ea4e5c0
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_10
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 5
-      y: 70
-      width: 74
-      height: 17
-    spriteID: f8408db641972bb4a942236f468e34e5
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_11
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 6
-      y: 50
-      width: 62
-      height: 17
-    spriteID: 615c03e176bb7fb43b9d45d1c60e814c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_12
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 6
-      y: 29
-      width: 53
-      height: 17
-    spriteID: 04ce77b64f784674db006f99f54ff307
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_13
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 70
-      y: 30
-      width: 43
-      height: 17
-    spriteID: e2e4e1998a5c2ed4ea41737fbd26a46f
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_14
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 6
-      y: 6
-      width: 33
-      height: 17
-    spriteID: f832f1ba566109b429170604c923d46e
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_15
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 47
-      y: 6
-      width: 21
-      height: 17
-    spriteID: 894338439b84fa6468fbcda1108ab8d1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_16
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 78
-      y: 4
-      width: 16
-      height: 17
-    spriteID: 2e7f041d92802494fb1f4accd68caf33
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: New map sheet_17
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 105
-      y: 5
-      width: 16
-      height: 17
-    spriteID: 7f577483ac11a234793206a65d59544b
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-=======
   spriteSheetImportData: []
->>>>>>> Stashed changes
   asepriteLayers:
   - layerIndex: 0
     guid: -1746990509
@@ -567,11 +175,7 @@ ScriptedImporter:
         y: 17
         width: 117
         height: 206
-<<<<<<< Updated upstream
-      spriteId: 79c6645381a0b354db696b648d4f88e1
-=======
-      spriteId: d1bc3e8cf5dec0547a69581ee739f956
->>>>>>> Stashed changes
+      spriteId: c0977107ef2cfa24189b878aad066d91
     - name: New map sheet_Frame_1
       frameIndex: 1
       cellRect:
@@ -579,65 +183,10 @@ ScriptedImporter:
         y: 90
         width: 120
         height: 120
-<<<<<<< Updated upstream
-      spriteId: 6792e0e3c5a8c064482c37014dc00228
-    linkedCells: []
-    parentIndex: -1
-  platformSettings:
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Server
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: WebGL
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-=======
-      spriteId: 420af6c1e03a88c489e46c5e2a5a1aaf
+      spriteId: a9fee03bf57b7c34782609e5d6579513
     linkedCells: []
     parentIndex: -1
   platformSettings: []
->>>>>>> Stashed changes
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 120, y: 300}
