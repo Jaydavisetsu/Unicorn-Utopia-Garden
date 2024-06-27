@@ -24,7 +24,3 @@ public class PlantingSystem : MonoBehaviour
         }
     }
 }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes

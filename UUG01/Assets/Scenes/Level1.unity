@@ -66011,7 +66011,6 @@ Tilemap:
       - {fileID: 1456423668, guid: 7a0f2a7781b63b645beeff1051fcd31f, type: 3}
       - {fileID: -580631416, guid: 7a0f2a7781b63b645beeff1051fcd31f, type: 3}
       - {fileID: 823423498, guid: 7a0f2a7781b63b645beeff1051fcd31f, type: 3}
-<<<<<<< Updated upstream
       m_AnimationSpeed: 1.167228
 =======
       m_AnimationSpeed: 3.9864352
@@ -93353,7 +93352,6 @@ Tilemap:
       m_AnimationSpeed: 4.0697155
 =======
       m_AnimationSpeed: 3.964656
->>>>>>> Stashed changes
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 13, y: -33, z: 0}
