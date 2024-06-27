@@ -50,3 +50,7 @@ public class Crop : MonoBehaviour
     }
 
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
