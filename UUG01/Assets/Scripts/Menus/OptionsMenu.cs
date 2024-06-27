@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -29,8 +30,8 @@ public class OptionsMenu : MonoBehaviour
     Button mainButton;
     OptionsMenuItem[] menuItems;
 
-    //PauseMenu reference
-    PauseMenu pauseMenu;
+    //OptionsMenu reference
+
 
     //is menu opened or not
     bool isExpanded = false;
@@ -125,8 +126,7 @@ public class OptionsMenu : MonoBehaviour
             case 3:
                 //fourth button
                 Debug.Log("OtherOptions");
-                pauseMenu = new PauseMenu();
-                pauseMenu.Pause();
+
                 break;
         }
     }
