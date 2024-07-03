@@ -1,0 +1,888 @@
+fileFormatVersion: 2
+guid: 908cf71055db22547bb488ef645655ff
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Time & weather_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 278.33334
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6bd55563ace904ba0eb1cd3486cbec
+      internalID: 1947959690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 278.33334
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d53641ca4d63db428ca13c98d12aff2
+      internalID: -636535146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_2
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 278.33334
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f417781394f0b1428a4c5126becc437
+      internalID: 1646569247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_3
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 278.33334
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95898f5c728173f4493f46c931fe1286
+      internalID: 465672005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_4
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 222
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad05570153949541852c292116edd39
+      internalID: -816282760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 222
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a44da2fa1c182e4a9ed9a134254417f
+      internalID: -852881735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 222
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a7c8044a79ba44b91913d99c8ffea6
+      internalID: -605913164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 223
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435ca5cec2d399844baf1224824c4829
+      internalID: -453314940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_8
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 223.33333
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7c450df260d5a479f930620692a07e
+      internalID: -1292737936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_9
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 223.33333
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff680bbf7c07cf46879fcbe55599f16
+      internalID: -1488746321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 168
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8617fabbc8f84344bbe1943d3b0dd21
+      internalID: -1337080323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 168
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11d094a307f5fd41ac8db56e2147d3f
+      internalID: -1849021150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_12
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 169
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffed8f59b92edcb4b9327e6effdc72ed
+      internalID: -2002226104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_13
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 168
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0ce2f1f7b12a84c801c2bf394ad42c
+      internalID: -117575020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_14
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 168.33333
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd874cf475cd2f4683c5848704f43ab
+      internalID: -1028070730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_15
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 168.33333
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1471c2a7b04839e4494bc254bce85386
+      internalID: -1477746151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 113
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fdf384118b679745b9c7eec51deccd0
+      internalID: 674333406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_17
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 113
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4d706f681186943b4a62ecf855b56e
+      internalID: -98709653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_18
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 113
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e0f5d9af2a4d144905f3b25e17d85f
+      internalID: 1944049813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_19
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 113
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c3bb99a2580c046b747ce82b229487
+      internalID: 749326680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_20
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 113.33333
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69609d1da2062a74882805ef8de00597
+      internalID: -1228727452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_21
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 113.33333
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba36eb962d5029145985d48f48d6b535
+      internalID: 111469784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 58
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44bee06253fc8746912a8971202d186
+      internalID: -914590802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_23
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 58
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41200215685e1d42b208a2a4a1370f8
+      internalID: 1336263412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_24
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 58.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b949394d3f5963c44b175032b857cd4c
+      internalID: 911781859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_25
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 58.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5feab3e5fcfbac94cb3fb9ee57734146
+      internalID: -350152537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_26
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 58.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1123fcc2445288e47befcd7af826236f
+      internalID: -1885799611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_27
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 58.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2296fed3eeec75f47ac983d1fb4eb8cb
+      internalID: -1478456904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_28
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 3.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf15bf1747a3894eac60e23cd10a566
+      internalID: -2065639592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_29
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 3.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6d76d1dd1921e429acbad4d59b53bf
+      internalID: -112738412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_30
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 3.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429803c21b02d5e42a3dd23d013504c5
+      internalID: 92053687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_31
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 3.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3a0f0166eca01479efeb691fe77526
+      internalID: -1412044850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_32
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 3.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbffeeed6501064ca652a725f750203
+      internalID: 1665976548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Time & weather_33
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 3.333332
+        width: 37.333332
+        height: 55.666668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a4af45a2922bcc44866a1ce8ab0d7a7
+      internalID: -883205002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Time & weather_0: 1947959690
+      Time & weather_1: -636535146
+      Time & weather_10: -1337080323
+      Time & weather_11: -1849021150
+      Time & weather_12: -2002226104
+      Time & weather_13: -117575020
+      Time & weather_14: -1028070730
+      Time & weather_15: -1477746151
+      Time & weather_16: 674333406
+      Time & weather_17: -98709653
+      Time & weather_18: 1944049813
+      Time & weather_19: 749326680
+      Time & weather_2: 1646569247
+      Time & weather_20: -1228727452
+      Time & weather_21: 111469784
+      Time & weather_22: -914590802
+      Time & weather_23: 1336263412
+      Time & weather_24: 911781859
+      Time & weather_25: -350152537
+      Time & weather_26: -1885799611
+      Time & weather_27: -1478456904
+      Time & weather_28: -2065639592
+      Time & weather_29: -112738412
+      Time & weather_3: 465672005
+      Time & weather_30: 92053687
+      Time & weather_31: -1412044850
+      Time & weather_32: 1665976548
+      Time & weather_33: -883205002
+      Time & weather_4: -816282760
+      Time & weather_5: -852881735
+      Time & weather_6: -605913164
+      Time & weather_7: -453314940
+      Time & weather_8: -1292737936
+      Time & weather_9: -1488746321
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
