@@ -148,9 +148,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 432
-        y: 482
-        width: 95
-        height: 94
+        y: 557
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: Overworld_10
       rect:
         serializedVersion: 2
-        x: 497
+        x: 498
         y: 464
-        width: 31
-        height: 58
+        width: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -508,8 +508,8 @@ TextureImporter:
         y: 384
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.9, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -673,9 +673,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 565
-        y: 336
-        width: 35
-        height: 72
+        y: 371
+        width: 37
+        height: 37
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -779,8 +779,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 58
-        height: 128
+        width: 49
+        height: 113
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -844,8 +844,8 @@ TextureImporter:
         y: 384
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.9, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -865,8 +865,8 @@ TextureImporter:
         y: 384
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.9, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -895,6 +895,90 @@ TextureImporter:
       bones: []
       spriteID: d7289011fc4350d4386eccf14689aebe
       internalID: 252204009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Overworld_37
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 447
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cbd41e523ce3148bca6b44de3d02c2
+      internalID: 1669861868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Overworld_38
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 454
+        width: 16
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8fc2635b312e84791ce4c40e264beb
+      internalID: -1834943482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Overworld_39
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 483
+        width: 45
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420493b97754d7644a4fc5f74e1058c1
+      internalID: -2080546205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Overworld_40
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 496
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41ca1cae1ca0c244a75e7c505886353
+      internalID: 1262402483
       vertices: []
       indices: 
       edges: []
@@ -941,7 +1025,11 @@ TextureImporter:
       Overworld_34: -580631416
       Overworld_35: 823423498
       Overworld_36: 252204009
+      Overworld_37: 1669861868
+      Overworld_38: -1834943482
+      Overworld_39: -2080546205
       Overworld_4: 1471664804
+      Overworld_40: 1262402483
       Overworld_5: -1012019957
       Overworld_6: -157185653
       Overworld_7: 760674378
