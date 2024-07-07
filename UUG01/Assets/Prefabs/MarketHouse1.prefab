@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6441556707148229663}
   - component: {fileID: -6563638217531765269}
   - component: {fileID: 6607601690441859429}
+  - component: {fileID: -9200330612277975930}
   m_Layer: 9
   m_Name: MarketHouse1
   m_TagString: Untagged
@@ -150,3 +151,15 @@ PolygonCollider2D:
       - {x: 1.7927592, y: 0.49141717}
       - {x: 1.0662785, y: 0.52170587}
   m_UseDelaunayMesh: 0
+--- !u!114 &-9200330612277975930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8930435240085175384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc4e634c6577c0408b06694e48b58be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 792587537713577582}
   - component: {fileID: 2932629360894144285}
   - component: {fileID: 1504753246503753092}
+  - component: {fileID: 4099790669414231403}
   m_Layer: 0
   m_Name: Bridge
   m_TagString: Untagged
@@ -182,3 +183,15 @@ PolygonCollider2D:
       - {x: 0.66700804, y: -0.65990245}
       - {x: 0.6673164, y: -0.5941566}
   m_UseDelaunayMesh: 0
+--- !u!114 &4099790669414231403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3071945814502935292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc4e634c6577c0408b06694e48b58be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
