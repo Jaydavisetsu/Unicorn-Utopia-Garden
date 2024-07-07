@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -7858002117926251788}
   - component: {fileID: 3360353966073656384}
   - component: {fileID: 1044313523095645911}
+  - component: {fileID: 2231285917554638901}
   m_Layer: 0
   m_Name: Bush
   m_TagString: Untagged
@@ -153,3 +154,15 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: eef52db4d01294543a44a1588cdb1120, type: 2}
+--- !u!114 &2231285917554638901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209096174138376784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc4e634c6577c0408b06694e48b58be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
