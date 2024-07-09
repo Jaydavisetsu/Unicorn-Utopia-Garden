@@ -22,6 +22,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        AudioManager.Instance.PlaySFX("Selecting");
+
         if (PauseMenuu == null)
         {
             Debug.LogError("PauseMenuu is not assigned in the Inspector during Pause.");
@@ -34,22 +36,30 @@ public class PauseMenu : MonoBehaviour
 
     public void Cancel3()
     {
+        AudioManager.Instance.PlaySFX("Selecting");
+
         PauseMenuu.SetActive(false);
         Time.timeScale = 1; // Resuming the real time game.
     }
 
     public void Save()
     {
+        AudioManager.Instance.PlaySFX("Selecting");
+
         DataPersistenceManager.Instance.SaveGame(); //From the DataPersistence Manager.
     }
 
     public void Settings()
     {
+        AudioManager.Instance.PlaySFX("Selecting");
+
         //This is done using "on click" in unity.
     }
 
     public void MainMenu()
     {
+        AudioManager.Instance.PlaySFX("Selecting");
+
         //TODO: Have to implement a warning sign if game is not saved before going to main menu.
 
         SceneManager.LoadScene("MainMenu"); //When the main menu button is clicked, it will load the main menu
@@ -57,6 +67,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Exit()
     {
+        AudioManager.Instance.PlaySFX("Selecting");
+
         //TODO: Have to implement a warning sign if game is not saved before exiting.
         Application.Quit();
     }

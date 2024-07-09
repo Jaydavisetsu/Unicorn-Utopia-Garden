@@ -52,6 +52,7 @@ public class OptionsMenu : MonoBehaviour
 
         mainButton = transform.GetChild(0).GetComponent<Button>();
         mainButton.onClick.AddListener(ToggleMenu);
+
         //SetAsLastSibling () to make sure that the main button will be always at the top layer
         mainButton.transform.SetAsLastSibling();
 
@@ -71,6 +72,8 @@ public class OptionsMenu : MonoBehaviour
 
     void ToggleMenu()
     {
+        AudioManager.Instance.PlaySFX("Selecting");
+
         isExpanded = !isExpanded;
 
         if (isExpanded)
@@ -113,20 +116,23 @@ public class OptionsMenu : MonoBehaviour
         {
             case 0:
                 //first button
+                AudioManager.Instance.PlaySFX("Selecting");
                 Debug.Log("Market");
                 break;
             case 1:
                 //second button
+                AudioManager.Instance.PlaySFX("Selecting");
                 Debug.Log("InvenCusto");
                 break;
             case 2:
                 //third button
+                AudioManager.Instance.PlaySFX("Selecting");
                 Debug.Log("Map");
                 break;
             case 3:
                 //fourth button
+                AudioManager.Instance.PlaySFX("Selecting");
                 Debug.Log("OtherOptions");
-
                 break;
         }
     }
