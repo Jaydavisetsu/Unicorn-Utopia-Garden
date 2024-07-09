@@ -29,6 +29,8 @@ public class GameMenu : MonoBehaviour
     //Loads the level (for now until there will be a game manager to save the different games) when the button is clicked.
     public void OpenGame(int gameId)
     {
+        AudioManager.Instance.PlaySFX("Selecting");
+
         //DataPersistenceManager.Instance.LoadGame();
         string GameName = "Level" + gameId; //Calling it level for now. Until there are more levels added, then I will create a level manager for it.
         SceneManager.LoadScene(GameName);

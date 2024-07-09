@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    // 
     public Slider MusicSlider, SfxSlider;
 
     public void ToggleMusic()
