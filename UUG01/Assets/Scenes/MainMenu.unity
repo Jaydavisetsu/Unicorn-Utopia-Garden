@@ -3710,11 +3710,7 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 79453f941eb996f4e8fb15f15753fc47, type: 3}
   SfxSounds:
   - Name: Selecting
-    Clip: {fileID: 8300000, guid: f172c1dbab7a8344aacdd632baab8e29, type: 3}
-  - Name: Hurt
-    Clip: {fileID: 8300000, guid: 630d54872e152c2429b2a98068ae9aae, type: 3}
-  - Name: Power Up
-    Clip: {fileID: 8300000, guid: 3bd0ae93ebb858042aa7ff79148db10f, type: 3}
+    Clip: {fileID: 8300000, guid: 612100abc7db9a144b28f4b4d7342c30, type: 3}
   MusicSource: {fileID: 2117107293}
   SfxSource: {fileID: 1607708216}
 --- !u!1 &1720166953
