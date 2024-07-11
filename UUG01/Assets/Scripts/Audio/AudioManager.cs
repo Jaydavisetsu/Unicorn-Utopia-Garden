@@ -51,7 +51,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySFX(string name) //Playing the sound effects.
+    //-----------------------SFX THINGS-------------------------------------------------------
+
+    public void PlaySFX(string name) //Playing the sound effect.
     {
         Sound s = Array.Find(SfxSounds, x => x.Name == name);
 
@@ -66,17 +68,17 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void StopSFX() //Playing the sound effects.
+    public void StopSFX() //Stoppingg the sound effect.
     {
         SfxSource.Stop();
     }
 
-    public void FadeInSFX(string name, float duration)
+    public void FadeInSFX(string name, float duration, float targetVolume)
     {
-        Sound s = Array.Find(SfxSounds, x => x.Name == name);
+        Sound s = System.Array.Find(SfxSounds, x => x.Name == name);
         if (s != null)
         {
-            StartCoroutine(FadeIn(SfxSource, s.Clip, duration, true)); // Enable looping.
+            StartCoroutine(FadeIn(SfxSource, s.Clip, duration, targetVolume, true)); // Enable looping.
         }
         else
         {
@@ -89,13 +91,12 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(FadeOut(SfxSource, duration));
     }
 
-    private IEnumerator FadeIn(AudioSource audioSource, AudioClip clip, float duration, bool loop)
+    private IEnumerator FadeIn(AudioSource audioSource, AudioClip clip, float duration, float targetVolume, bool loop)
     {
         audioSource.clip = clip;
-        audioSource.loop = loop; // Set looping.
+        audioSource.loop = true; // Set looping.
         audioSource.Play();
         audioSource.volume = 0f;
-        float targetVolume = 1f; // Can adjust as needed.
 
         for (float t = 0; t < duration; t += Time.deltaTime)
         {

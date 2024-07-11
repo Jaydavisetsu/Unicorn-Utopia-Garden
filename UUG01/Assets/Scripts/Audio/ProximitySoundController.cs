@@ -21,9 +21,11 @@ namespace Cinemachine
         public float ActivationDistance; // Distance at which sound should activate.
 
         public float FadeDuration = 2.0f; // Duration of fade in and fade out.
-        public string RiverSoundName; // The name of the river sound is set in the inspector.
+        public string SoundName; // The name of the river sound is set in the inspector.
         float m_Position; // The position along the path to set the cart to in path units.
-        
+        public float targetVolume; // Target volume for the river sound.
+
+
         private CinemachinePathBase.PositionUnits m_PositionUnits = CinemachinePathBase.PositionUnits.PathUnits;
 
         private bool IsPlaying = false; //.Play() and .Stop() methods would be called continuously every frame while the player is within or outside the activation distance, which is unnecessary and can be computationally expensive.
@@ -50,7 +52,7 @@ namespace Cinemachine
 
                 if (distance <= ActivationDistance && !IsPlaying)
                 {
-                    AudioManager.Instance.FadeInSFX(RiverSoundName, FadeDuration);
+                    AudioManager.Instance.FadeInSFX(SoundName, FadeDuration, targetVolume);
                     IsPlaying = true;
                 }
                 else if (distance > ActivationDistance && IsPlaying)
