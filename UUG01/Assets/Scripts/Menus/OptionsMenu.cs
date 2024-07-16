@@ -30,9 +30,6 @@ public class OptionsMenu : MonoBehaviour
     Button mainButton;
     OptionsMenuItem[] menuItems;
 
-    //OptionsMenu reference
-
-
     //is menu opened or not
     bool isExpanded = false;
 
@@ -116,28 +113,24 @@ public class OptionsMenu : MonoBehaviour
         {
             case 0:
                 //first button
-                AudioManager.Instance.PlaySFX("Selecting");
                 Debug.Log("Market");
                 break;
             case 1:
                 //second button
-                AudioManager.Instance.PlaySFX("Selecting");
                 Debug.Log("InvenCusto");
                 break;
             case 2:
                 //third button
-                AudioManager.Instance.PlaySFX("Selecting");
                 Debug.Log("Map");
                 break;
             case 3:
                 //fourth button
-                AudioManager.Instance.PlaySFX("Selecting");
                 Debug.Log("OtherOptions");
                 break;
         }
     }
 
-    void OnDestroy()
+    public void OnDisable()
     {
         //remove click listener to avoid memory leaks
         mainButton.onClick.RemoveListener(ToggleMenu);
