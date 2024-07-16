@@ -20,8 +20,8 @@ namespace Cinemachine
         [Tooltip("Activation Distance")]
         public float ActivationDistance; // Distance at which sound should activate.
 
-        public float FadeDuration = 2.0f; // Duration of fade in and fade out.
-        public string SoundName; // The name of the river sound is set in the inspector.
+        public float FadeDuration; // Duration of fade in and fade out.
+        public string SoundName; // The name of the sound is set in the inspector.
         float m_Position; // The position along the path to set the cart to in path units.
         public float targetVolume; // Target volume for the river sound.
 
