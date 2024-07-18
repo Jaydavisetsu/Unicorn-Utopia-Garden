@@ -8,7 +8,6 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance; //Creating a static instance of this code to easily access if from anywhere.
 
-
     //Two different arrays from the sound class.
     public Sound[] MusicSounds, SfxSounds;
     public AudioSource MusicSource, SfxSource;
