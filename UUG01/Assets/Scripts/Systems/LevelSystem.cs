@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelSystem : MonoBehaviour
+public class LevelSystem : MonoBehaviour, IDataPersistence
 {
     private int XPNow;
     public static int Level { get; private set; }
@@ -36,6 +36,22 @@ public class LevelSystem : MonoBehaviour
         }
 
         xpToNextLevel.TryGetValue(Level, out xpToNext);
+    }
+
+    public void LoadData(GameData data) //Method from IDataPersistence.
+    {
+        this.XPNow = data.XPNow;
+        Level = data.Level;
+        this.xpToNext = data.xpToNext;
+
+        UpdateUI();
+    }
+
+    public void SaveData(GameData data) //Method from IDataPersistence.
+    {
+        data.XPNow = this.XPNow;
+        data.Level = Level;
+        data.xpToNext = this.xpToNext;
     }
 
     private static void Initialize()
@@ -86,8 +102,6 @@ public class LevelSystem : MonoBehaviour
     {
         EventManager.Instance.AddListener<XPAddedGameEvent>(OnXPAdded);
         EventManager.Instance.AddListener<LevelChangedGameEvent>(OnLevelChanged);
-
-        UpdateUI();
     }
 
     private void UpdateUI()
@@ -95,6 +109,7 @@ public class LevelSystem : MonoBehaviour
         float fill = (float)XPNow / xpToNext;
         slider.value = fill;
         xpText.text = XPNow + "/" + xpToNext;
+        lvlText.text = Level.ToString();
     }
 
     private void OnXPAdded(XPAddedGameEvent info)

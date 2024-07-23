@@ -4,26 +4,30 @@ using UnityEngine;
 using TMPro;
 using System;
 
-[RequireComponent(typeof(TMP_Text))]
-public class WorldTimeDisplay : MonoBehaviour
+namespace WorldTime
 {
-    [SerializeField] private WorldTime _worldTime;
-    private TMP_Text _text;
-
-    private void Awake()
+    [RequireComponent(typeof(TMP_Text))]
+    public class WorldTimeDisplay : MonoBehaviour
     {
-        _text = GetComponent<TMP_Text>();
-        _worldTime.WorldTimeChanged += OnWorldTimeChanged;
-    }
+        [SerializeField] private WorldTime _worldTime;
+        private TMP_Text _text;
 
-    private void OnDestroy()
-    {
-        _worldTime.WorldTimeChanged -= OnWorldTimeChanged;
-    }
+        private void Awake()
+        {
+            _text = GetComponent<TMP_Text>();
 
-    private void OnWorldTimeChanged(object sender, TimeSpan newTime)
-    {
-        _text.SetText(newTime.ToString(@"hh\:mm"));
-    }
+            _worldTime.WorldTimeChanged += OnWorldTimeChanged;
+        }
 
+        private void OnDestroy()
+        {
+            _worldTime.WorldTimeChanged -= OnWorldTimeChanged;
+        }
+
+        private void OnWorldTimeChanged(object sender, TimeSpan newTime)
+        {
+            _text.SetText(newTime.ToString(@"hh\:mm"));
+        }
+    }
 }
+// Source: https://www.youtube.com/watch?v=0nq1ZFxuEJY
