@@ -126,10 +126,10 @@ TextureImporter:
       name: Time & weather_0
       rect:
         serializedVersion: 2
-        x: 69
-        y: 278.33334
-        width: 37.333332
-        height: 55.666668
+        x: 65
+        y: 271
+        width: 46
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Time & weather_1
       rect:
         serializedVersion: 2
-        x: 122
-        y: 278.33334
-        width: 37.333332
-        height: 55.666668
+        x: 143
+        y: 161
+        width: 48
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: Time & weather_2
       rect:
         serializedVersion: 2
-        x: 175
-        y: 278.33334
-        width: 37.333332
-        height: 55.666668
+        x: 150
+        y: 321
+        width: 32
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: Time & weather_3
       rect:
         serializedVersion: 2
-        x: 228
-        y: 278.33334
-        width: 37.333332
-        height: 55.666668
+        x: 224
+        y: 270
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,9 +274,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 176
-        y: 223
+        y: 222
         width: 48
-        height: 47
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: Time & weather_8
       rect:
         serializedVersion: 2
-        x: 228
-        y: 223.33333
-        width: 37.333332
-        height: 55.666668
+        x: 223
+        y: 222
+        width: 49
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: Time & weather_9
       rect:
         serializedVersion: 2
-        x: 281
-        y: 223.33333
-        width: 37.333332
-        height: 55.666668
+        x: 272
+        y: 222
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,9 +337,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 15
-        y: 168
+        y: 174
         width: 49
-        height: 54
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,9 +358,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 168
+        y: 174
         width: 48
-        height: 54
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,9 +379,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 112
-        y: 169
+        y: 174
         width: 47
-        height: 53
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -400,9 +400,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 176
-        y: 168
+        y: 174
         width: 48
-        height: 55
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +420,10 @@ TextureImporter:
       name: Time & weather_14
       rect:
         serializedVersion: 2
-        x: 228
-        y: 168.33333
-        width: 37.333332
-        height: 55.666668
+        x: 224
+        y: 174
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +441,10 @@ TextureImporter:
       name: Time & weather_15
       rect:
         serializedVersion: 2
-        x: 281
-        y: 168.33333
-        width: 37.333332
-        height: 55.666668
+        x: 272
+        y: 174
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,8 +525,8 @@ TextureImporter:
       name: Time & weather_19
       rect:
         serializedVersion: 2
-        x: 175
-        y: 113
+        x: 177
+        y: 110
         width: 44
         height: 49
       alignment: 0
@@ -546,10 +546,10 @@ TextureImporter:
       name: Time & weather_20
       rect:
         serializedVersion: 2
-        x: 228
-        y: 113.33333
-        width: 37.333332
-        height: 55.666668
+        x: 229
+        y: 109
+        width: 37
+        height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

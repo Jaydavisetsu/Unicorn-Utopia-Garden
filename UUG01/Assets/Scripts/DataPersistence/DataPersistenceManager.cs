@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq; //Gives nicer syntax for finding the data of resistance objects.
 
 /// <summary>
-/// This class keeps track of the current state of game data and is responsible for orchestrating all the logic that goes into saving and loading the game.
+/// This singleton class keeps track of the current state of GameData and is responsible for orchestrating all the logic that goes into saving and loading the game.
 /// The new, load, and save methods are called depending on how I want to laod and save the game. 
 /// The methods are public so that they can be called from other scripts.
 /// This class is set up as a singleton instance so that there is only one in the scene.
@@ -122,8 +122,7 @@ public class DataPersistenceManager : MonoBehaviour
     //TODO: Maybe one to delete a game data if the player chooses too?
 
     /*
-    //Gets called any time the game exits ... set this up to be when the save button is pressed?... this method might be unnecessary later.
-    private void OnApplicationQuit() 
+    private void OnApplicationQuit() //Gets called any time the game exits ... set this up to be when the save button is pressed?... this method might be unnecessary later.
     {
         SaveGame();
     }

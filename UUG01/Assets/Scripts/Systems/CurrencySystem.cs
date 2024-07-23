@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class CurrencySystem : MonoBehaviour
+public class CurrencySystem : MonoBehaviour, IDataPersistence
 {
     //all player's treasures
     private static Dictionary<CurrencyType, int> CurrencyAmounts = new Dictionary<CurrencyType, int>();
@@ -24,15 +24,40 @@ public class CurrencySystem : MonoBehaviour
             currencyTexts.Add((CurrencyType)i, texts[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>());
         }
     }
+    public void LoadData(GameData data) //Method from IDataPersistence.
+    {
+        if (CurrencyAmounts == null)
+        {
+            CurrencyAmounts = new Dictionary<CurrencyType, int>();
+        }
+
+        CurrencyAmounts.Clear();
+
+        foreach (var kvp in data.CurrencyAmounts)
+        {
+            CurrencyAmounts.Add(kvp.Key, kvp.Value);
+        }
+
+        //------------------------------------
+
+        //give the player some currency
+        CurrencyAmounts[CurrencyType.Silver] = 100;
+        //update UI texts to reflect the right amount
+        UpdateUI();
+    }
+
+    public void SaveData(GameData data) //Method from IDataPersistence.
+    {
+        data.CurrencyAmounts = new Dictionary<CurrencyType, int>();
+
+        foreach (var kvp in CurrencyAmounts)
+        {
+            data.CurrencyAmounts.Add(kvp.Key, kvp.Value);
+        }
+    }
 
     private void Start()
     {
-        //give the player some currency
-        CurrencyAmounts[CurrencyType.Silver] = 100;
-
-        //update UI texts to reflect the right amount
-        UpdateUI();
-
         //add listeners for currency change events and not enough currency
         EventManager.Instance.AddListener<CurrencyChangeGameEvent>(OnCurrencyChange);
         EventManager.Instance.AddListener<NotEnoughCurrencyGameEvent>(OnNotEnough);
