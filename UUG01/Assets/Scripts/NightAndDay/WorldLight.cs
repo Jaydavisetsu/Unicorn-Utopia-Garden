@@ -37,7 +37,6 @@ namespace WorldTime
         {
             return (float)timeSpan.TotalMinutes % WorldTimeConstants.MinutesInDay / WorldTimeConstants.MinutesInDay;
         }
-
     }
 }
 // Source: https://www.youtube.com/watch?v=0nq1ZFxuEJY

@@ -1,22 +1,30 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+using static WorldTime.WorldTimeWatcher;
 
 namespace WorldTime
 {
-    public class WorldTimeWatcher : MonoBehaviour
+    public class WorldTimeWatcher : MonoBehaviour, IDataPersistence
     {
         [SerializeField] private WorldTime worldTime;
+        [SerializeField] public Image imageComponent; // Assign in Inspector
+        [SerializeField] public List<Schedule> schedule;
 
-        [SerializeField] private List<Schedule> schedule;
+        private void Awake()
+        {
+            imageComponent = GetComponent<Image>();
+            worldTime.WorldTimeChanged += CheckSchedule; // Subscribe to the WorldTimeChanged event
 
+        }
         private void Start()
         {
-            worldTime.WorldTimeChanged += CheckSchedule;
+            //worldTime.WorldTimeChanged += CheckSchedule; // Subscribe to the WorldTimeChanged event
         }
-
         private void OnDestroy()
         {
             worldTime.WorldTimeChanged -= CheckSchedule;
@@ -32,11 +40,39 @@ namespace WorldTime
         }
 
         [Serializable]
-        private class Schedule
+        public class Schedule
         {
             public int Hour;
             public int Minute;
             public UnityEvent Action;
+        }
+        public void LoadData(GameData data) //Method from IDataPersistence.
+        {
+            if (schedule == null)
+            {
+                schedule = new List<Schedule>();
+            }
+            else if (schedule != null)
+            {
+                data.Schedule.Clear();
+
+            }
+
+            foreach (var kvp in data.Schedule)
+            {
+                //CurrencyAmounts.Add(kvp.Key, kvp.Value);
+                schedule.Add(kvp);
+            }
+        }
+
+        public void SaveData(GameData data) //Method from IDataPersistence.
+        {
+            data.Schedule = new List<Schedule>();
+
+            foreach (var kvp in schedule)
+            {
+                data.Schedule.Add(kvp);
+            }
         }
     }
 }
