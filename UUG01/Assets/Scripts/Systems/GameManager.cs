@@ -10,10 +10,22 @@ public class GameManager : MonoBehaviour
     // Save Panel
     public GameObject panel;
 
+    public ItemManager itemManager;
+
     private void Awake()
     {
-        //initialize fields
-        current = this;
+        if(current != null && current != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            //initialize fields
+            current = this;
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+        itemManager = GetComponent<ItemManager>();
     }
 
     public void GetXP(int amount)
@@ -30,3 +42,4 @@ public class GameManager : MonoBehaviour
     }
 }
 // Source: https://www.youtube.com/watch?v=Txx_uCxIpdE&list=LL&index=2&t=428s
+// Source: https://www.youtube.com/watch?v=Bdaum2wMM20&list=PL4PNgDjMajPN51E5WzEi7cXzJ16BCHZXl&index=10
