@@ -17,10 +17,9 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            //DontDestroyOnLoad(gameObject);
 
             // Reparenting the GameObject AudioManager because DontDestroyOnLoad only works on root GameObjects and not child game objects.
-            Instance.transform.SetParent(null); // Makeing it a root GameObject.
+            Instance.transform.SetParent(null); // Making it a root GameObject.
             DontDestroyOnLoad(gameObject);
 
         }
