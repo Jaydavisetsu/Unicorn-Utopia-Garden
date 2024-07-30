@@ -133,7 +133,7 @@ public class LevelSystem : MonoBehaviour, IDataPersistence
         lvlText.text = (info.newLvl + 1).ToString();
         UpdateUI();
 
-        GameObject window = Instantiate(lvlWindowPrefab, GameManager.current.panel.transform);
+        GameObject window = Instantiate(lvlWindowPrefab, GameManagerA.current.panel.transform);
 
         //initialize texts and images here
 

@@ -7,14 +7,15 @@ public class GameManager : MonoBehaviour
     // singletone pattern
     public static GameManager current;
 
-    // Save Panel
-    public GameObject panel;
-
     public ItemManager itemManager;
+    public TileManager tileManager;
+    public UI_Manager uiManager;
+
+    public Player player;
 
     private void Awake()
     {
-        if(current != null && current != this)
+        if (current != null && current != this)
         {
             Destroy(this.gameObject);
         }
@@ -24,22 +25,20 @@ public class GameManager : MonoBehaviour
             current = this;
         }
 
+        // Reparenting the GameObject AudioManager because DontDestroyOnLoad only works on root GameObjects and not child game objects.
+        //current.transform.SetParent(null); // Making it a root GameObject.
         DontDestroyOnLoad(this.gameObject);
+        
         itemManager = GetComponent<ItemManager>();
-    }
+        tileManager = GetComponent<TileManager>();
+        uiManager = GetComponent<UI_Manager>();
 
-    public void GetXP(int amount)
-    {
-        XPAddedGameEvent info = new XPAddedGameEvent(amount);
-        EventManager.Instance.QueueEvent(info);
-    }
+        if (uiManager == null)
+        {
+            Debug.Log(uiManager + "not found!!!!!!!!!");
+        }
 
-    public void GetCoins(int amount)
-    {
-        CurrencyChangeGameEvent info = new CurrencyChangeGameEvent(amount, CurrencyType.Silver);
-
-        EventManager.Instance.QueueEvent(info);  
+        player = FindObjectOfType<Player>();
     }
 }
-// Source: https://www.youtube.com/watch?v=Txx_uCxIpdE&list=LL&index=2&t=428s
 // Source: https://www.youtube.com/watch?v=Bdaum2wMM20&list=PL4PNgDjMajPN51E5WzEi7cXzJ16BCHZXl&index=10
