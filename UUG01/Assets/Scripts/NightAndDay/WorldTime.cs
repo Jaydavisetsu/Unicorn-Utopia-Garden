@@ -37,7 +37,7 @@ namespace WorldTime
             _currentTime += TimeSpan.FromMinutes(1);
             WorldTimeChanged?.Invoke(this, _currentTime);
             yield return new WaitForSeconds(_minuteLength);
-            Debug.Log("WorldTime cs - " + "Hour : " + _currentTime.Hours + " Minute: " + _currentTime.Minutes);
+            //Debug.Log("WorldTime cs - " + "Hour : " + _currentTime.Hours + " Minute: " + _currentTime.Minutes);
             StartCoroutine(AddMinute());
         }
     }

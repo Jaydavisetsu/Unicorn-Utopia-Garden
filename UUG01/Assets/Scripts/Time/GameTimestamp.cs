@@ -44,7 +44,7 @@ public class GameTimestamp // This class manages the in-game time. It is differe
     public void UpdateClock() // Increment the time by one minute.
     {
         minute++;
-        Debug.Log("GameTimestamp cs - UpdateClock");
+        //Debug.Log("GameTimestamp cs - UpdateClock");
 
         if (minute >= 60) // 60 minutes in 1 hour.
         {
@@ -76,7 +76,7 @@ public class GameTimestamp // This class manages the in-game time. It is differe
             }
         }
 
-        Debug.Log($"GameTimestamp cs - Updated Clock - Hour: {hour}, Minute: {minute}, Day: {day}, Season: {season}, Year: {year}");
+        //Debug.Log($"GameTimestamp cs - Updated Clock - Hour: {hour}, Minute: {minute}, Day: {day}, Season: {season}, Year: {year}");
     }
 
     //To be easily converted from any context.---------------------------------------

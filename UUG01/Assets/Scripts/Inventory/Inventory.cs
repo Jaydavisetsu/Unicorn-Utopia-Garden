@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 [System.Serializable]
 public class Inventory
@@ -10,8 +8,7 @@ public class Inventory
     [System.Serializable]
     public class Slot
     {
-        public CollectableType type;
-        //public string itemName;
+        public string itemName;
         public int count;
         public int maxAllowed;
 
@@ -19,16 +16,27 @@ public class Inventory
 
         public Slot()
         {
-            type = CollectableType.NONE;
-
-            //itemName = "";
+            itemName = "";
             count = 0;
             maxAllowed = 99;
         }
 
-        public bool CanAddItem()
+        public bool IsEmpty
         {
-            if(count < maxAllowed)
+            get
+            {
+                if (itemName == "" && count == 0)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+        }
+
+        public bool CanAddItem(string itemName)
+        {
+            if (this.itemName == itemName && count < maxAllowed)
             {
                 return true;
             }
@@ -36,30 +44,38 @@ public class Inventory
             return false;
         }
 
-        public void AddItem(Collectable item)
+        public void AddItem(Item item)
         {
-            this.type = item.type;
-            this.icon = item.icon;
+            this.itemName = item.data.itemName;
+            this.icon = item.data.icon;
+            count++;
+        }
+
+        public void AddItem(string itemName, Sprite icon, int maxAllowed)
+        {
+            this.itemName = itemName;
+            this.icon = icon;
+            this.maxAllowed = maxAllowed;
             count++;
         }
 
         public void RemoveItem()
         {
-            if(count > 0)
+            if (count > 0)
             {
                 count--;
 
-                if(count == 0)
+                if (count == 0)
                 {
                     icon = null;
-                    type = CollectableType.NONE;
+                    itemName = "";
                 }
             }
         }
     }
 
     public List<Slot> slots = new List<Slot>();
-    //public Slot selectedSlot = null;
+    public Slot selectedSlot = null;
 
     public Inventory(int numSlots)
     {
@@ -69,20 +85,20 @@ public class Inventory
         }
     }
 
-    public void Add(Collectable item)
+    public void Add(Item item)
     {
-        foreach(Slot slot in slots)
+        foreach (Slot slot in slots)
         {
-            if(slot.type == item.type && slot.CanAddItem())
+            if (slot.itemName == item.data.itemName && slot.CanAddItem(item.data.itemName))
             {
                 slot.AddItem(item);
                 return;
             }
         }
 
-        foreach(Slot slot in slots)
+        foreach (Slot slot in slots)
         {
-            if (slot.type == CollectableType.NONE)
+            if (slot.itemName == "")
             {
                 slot.AddItem(item);
                 return;
@@ -95,7 +111,42 @@ public class Inventory
         slots[index].RemoveItem();
     }
 
-    
+    public void Remove(int index, int count)
+    {
+        if (slots[index].count >= count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                Remove(index);
+            }
+        }
+    }
+
+    public void MoveSlot(int fromIndex, int toIndex, Inventory toInventory, int numToMove = 1)
+    {
+        if (slots != null && slots.Count > 0)
+        {
+            Slot fromSlot = slots[fromIndex];
+            Slot toSlot = toInventory.slots[toIndex];
+
+            for (int i = 0; i < numToMove; i++)
+            {
+                if (toSlot.IsEmpty || toSlot.CanAddItem(fromSlot.itemName))
+                {
+                    toSlot.AddItem(fromSlot.itemName, fromSlot.icon, fromSlot.maxAllowed);
+                    fromSlot.RemoveItem();
+                }
+            }
+        }
+    }
+
+    public void SelectSlot(int index)
+    {
+        if (slots != null && slots.Count > 0)
+        {
+            selectedSlot = slots[index];
+        }
+    }
 }
 // Source: https://www.youtube.com/watch?v=rOW17tBiCcY&list=PL4PNgDjMajPN51E5WzEi7cXzJ16BCHZXl&index=9
 

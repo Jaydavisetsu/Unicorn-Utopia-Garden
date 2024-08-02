@@ -29,7 +29,7 @@ public class TimeManager : MonoBehaviour, IDataPersistence
 
     void Start() // Start is called before the first frame update.
     {
-        Debug.Log("TimeManager cs Start");
+        //Debug.Log("TimeManager cs Start");
 
         StartCoroutine(TimeUpdate()); // Cannot use this because of WorldTime.cs
     }

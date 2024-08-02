@@ -118,6 +118,8 @@ public class OptionsMenu : MonoBehaviour
             case 1:
                 //second button
                 Debug.Log("InvenCusto");
+                GameManager.current.uiManager.RefreshAll();
+
                 break;
             case 2:
                 //third button
