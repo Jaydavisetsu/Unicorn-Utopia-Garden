@@ -22,7 +22,8 @@ public class UI_Manager : MonoBehaviour
 
     private void Start()
     {
-        ToggleInventoryUI();
+        //ToggleInventoryUI();
+        RefreshInventoryUI("Backpack");
     }
 
     private void Update()

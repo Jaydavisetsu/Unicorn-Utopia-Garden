@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class Inventory_UI : MonoBehaviour
 {
     public string inventoryName;
-    public List<Slot_UI> slots = new List<Slot_UI>();
+    public List<Slot_UI> slots = new List<Slot_UI>(1);
     public Canvas canvas;
 
     private Inventory inventory = new Inventory(9);
