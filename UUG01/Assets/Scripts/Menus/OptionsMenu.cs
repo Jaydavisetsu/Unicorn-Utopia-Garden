@@ -113,7 +113,7 @@ public class OptionsMenu : MonoBehaviour
         {
             case 0:
                 //first button
-                Debug.Log("Market");
+                Debug.Log("QuestLog");
                 break;
             case 1:
                 //second button
