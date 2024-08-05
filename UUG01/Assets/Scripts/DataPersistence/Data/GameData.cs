@@ -16,6 +16,8 @@ public class GameData
 {
     //WHEN THE GAME IS LOADED AGAIN, THE DAYNNIGHT CYCLE SPRITE DOES NOT REFRESH TO IT:(
 
+    public long lastUpdated; // Used to timestamp for the filehandler.
+
     public Vector2 PlayerPosition; // From PlayerMovement.cs
 
     public Dictionary<CurrencyType, int> CurrencyAmounts; // From CurrencySystem.cs
