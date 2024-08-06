@@ -648,7 +648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_25
+      name: TomatoSeeds
       rect:
         serializedVersion: 2
         x: 0
@@ -2223,7 +2223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_100
+      name: CornSeeds
       rect:
         serializedVersion: 2
         x: 0
@@ -3798,7 +3798,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_175
+      name: RadishSeeds
       rect:
         serializedVersion: 2
         x: 0
@@ -4323,7 +4323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_200
+      name: CabbageSeeds
       rect:
         serializedVersion: 2
         x: 0
@@ -8985,7 +8985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_422
+      name: RedRoseSeeds
       rect:
         serializedVersion: 2
         x: 0
@@ -15600,7 +15600,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_737
+      name: DaffodilSeeds
       rect:
         serializedVersion: 2
         x: 0
@@ -16923,7 +16923,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_800
+      name: HeliopsisSeeds
       rect:
         serializedVersion: 2
         x: 0
@@ -17374,10 +17374,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      CabbageSeeds: 148324978
+      CornSeeds: 1434767831
+      DaffodilSeeds: -1251639152
+      HeliopsisSeeds: -1308916144
+      RadishSeeds: 715884838
+      RedRoseSeeds: 428044214
+      TomatoSeeds: -1985250081
       crops_all_0: 622413858
       crops_all_1: -1432202564
       crops_all_10: -1603763719
-      crops_all_100: 1434767831
       crops_all_101: 627030976
       crops_all_102: -855789871
       crops_all_103: -519119547
@@ -17459,7 +17465,6 @@ TextureImporter:
       crops_all_172: -1760381187
       crops_all_173: 1193210664
       crops_all_174: -1660159763
-      crops_all_175: 715884838
       crops_all_176: -1648804931
       crops_all_177: 1314161187
       crops_all_178: 452813324
@@ -17488,7 +17493,6 @@ TextureImporter:
       crops_all_199: -2079061431
       crops_all_2: -1546684114
       crops_all_20: 1307079335
-      crops_all_200: 148324978
       crops_all_201: 1417611508
       crops_all_202: 1718458602
       crops_all_203: 885307853
@@ -17542,7 +17546,6 @@ TextureImporter:
       crops_all_247: 505825779
       crops_all_248: 1940810720
       crops_all_249: -410724226
-      crops_all_25: -1985250081
       crops_all_250: -1612938326
       crops_all_251: 1212307385
       crops_all_252: 738818801
@@ -17734,7 +17737,6 @@ TextureImporter:
       crops_all_42: 846027835
       crops_all_420: -839845407
       crops_all_421: 156846930
-      crops_all_422: 428044214
       crops_all_423: -692624991
       crops_all_424: -1210112032
       crops_all_425: -2092335011
@@ -18083,7 +18085,6 @@ TextureImporter:
       crops_all_734: 96703478
       crops_all_735: -1338842647
       crops_all_736: 1410883105
-      crops_all_737: -1251639152
       crops_all_738: -1946925312
       crops_all_739: -1652359736
       crops_all_74: 1711425683
@@ -18154,7 +18155,6 @@ TextureImporter:
       crops_all_799: 1545601857
       crops_all_8: -2062019933
       crops_all_80: 1659635686
-      crops_all_800: -1308916144
       crops_all_801: -649001651
       crops_all_802: 7226218
       crops_all_803: -1955646758

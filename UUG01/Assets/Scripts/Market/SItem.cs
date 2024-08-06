@@ -18,7 +18,14 @@ public class SItem
 {
 
     public enum ItemType {
-        CarrotSeeds
+        CarrotSeeds,
+        CabbageSeeds,
+        TomatoSeeds,
+        RadishSeeds,
+        CornSeeds,
+        RedRoseSeeds,
+        HeliopsisSeeds,
+        DaffodilSeeds
         /*ArmorNone,
         Armor_1,
         Armor_2,
@@ -32,7 +39,14 @@ public class SItem
     public static int GetCost(ItemType itemType) {
         switch (itemType) {
         default:
-        case ItemType.CarrotSeeds:        return 30;
+        case ItemType.CarrotSeeds:        return 15;
+        case ItemType.TomatoSeeds:        return 15;
+        case ItemType.RadishSeeds:        return 15;
+        case ItemType.CornSeeds:        return 15;
+        case ItemType.CabbageSeeds:        return 15;
+        case ItemType.RedRoseSeeds:        return 15;
+        case ItemType.HeliopsisSeeds:        return 15;
+        case ItemType.DaffodilSeeds:        return 15;
 
         /*
         case ItemType.ArmorNone:        return 0;
@@ -51,6 +65,13 @@ public class SItem
         switch (itemType) {
         default:
         case ItemType.CarrotSeeds:    return GameAssets.i.s_CarrotSeed;
+        case ItemType.TomatoSeeds:    return GameAssets.i.s_TomatoSeeds;
+        case ItemType.RadishSeeds:    return GameAssets.i.s_RadishSeeds;
+        case ItemType.CornSeeds:    return GameAssets.i.s_CornSeeds;
+        case ItemType.CabbageSeeds:    return GameAssets.i.s_CabbageSeeds;
+        case ItemType.RedRoseSeeds:    return GameAssets.i.s_RedRoseSeeds;
+        case ItemType.HeliopsisSeeds:    return GameAssets.i.s_HeliopsisSeeds;
+        case ItemType.DaffodilSeeds:    return GameAssets.i.s_DaffodilSeeds;
 
         /*
         case ItemType.ArmorNone:    return GameAssets.i.s_ArmorNone;

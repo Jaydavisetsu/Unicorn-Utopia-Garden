@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : Menu
 {
     [Header("Menu Navigation")]
     [SerializeField] private SaveSlotsMenu saveSlotsMenu;
@@ -43,11 +43,10 @@ public class MainMenu : MonoBehaviour
     public void OnContinueGameClicked()
     {
         DisableMenuButtons();
-
         // save the game anytime before loading a new scene
         DataPersistenceManager.Instance.SaveGame();
-
-        // Load the next scene, which will in turn Load the game because of OnSceneLoaded() in the DataPersistenceManager.
+        // load the next scene - which will in turn load the game because of 
+        // OnSceneLoaded() in the DataPersistenceManager
         SceneManager.LoadSceneAsync("Level1");
     }
 
@@ -67,5 +66,4 @@ public class MainMenu : MonoBehaviour
     {
         this.gameObject.SetActive(false);
     }
-
 }

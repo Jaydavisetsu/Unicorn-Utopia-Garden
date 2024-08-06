@@ -15,45 +15,52 @@ public class UI_Shop : MonoBehaviour
 
     private void Awake()
     {
-        container = transform.Find("container");
+        //container = transform.Find("container");
+        //shopItemTemplate = container.Find("shopItemTemplate");
+        //shopItemTemplate.gameObject.SetActive(false);
+        Debug.Log("UI_Shop.cs Awakened");
+
+        container = transform.Find("container").GetComponent<RectTransform>();
         shopItemTemplate = container.Find("shopItemTemplate");
         shopItemTemplate.gameObject.SetActive(false);
-        Debug.Log("UI_Shop.cs Awakened");
+
+        // Setup GridLayoutGroup
+        GridLayoutGroup gridLayoutGroup = container.GetComponent<GridLayoutGroup>();
+        gridLayoutGroup.startCorner = GridLayoutGroup.Corner.UpperLeft;
+        gridLayoutGroup.startAxis = GridLayoutGroup.Axis.Vertical; // or Horizontal
+        gridLayoutGroup.childAlignment = TextAnchor.UpperLeft;
+        gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount; // or FixedColumnCount/FixedRowCount
+        gridLayoutGroup.cellSize = new Vector2(450, 130); // Adjust button size
+        gridLayoutGroup.spacing = new Vector2(20, 10); // Adjust spacing
+
+        // Optionally use ContentSizeFitter
+        ContentSizeFitter contentSizeFitter = container.gameObject.GetComponent<ContentSizeFitter>();
+        if (contentSizeFitter == null)
+        {
+            contentSizeFitter = container.gameObject.AddComponent<ContentSizeFitter>();
+        }
+        contentSizeFitter.horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
+        contentSizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
     }
 
     private void Start() // This is where to add new item buttons on the UI.
     {
-        // Create a parent GameObject for the grid
-        GameObject gridParent = new GameObject("container");
-        gridParent.transform.SetParent(canvas.transform, false);
-
-        // Add GridLayoutGroup component to the parent
-        GridLayoutGroup gridLayoutGroup = gridParent.AddComponent<GridLayoutGroup>();
-        gridLayoutGroup.startCorner = GridLayoutGroup.Corner.UpperLeft;
-        gridLayoutGroup.startAxis = GridLayoutGroup.Axis.Vertical;
-        gridLayoutGroup.childAlignment = TextAnchor.UpperLeft;
-        gridLayoutGroup.constraint = GridLayoutGroup.Constraint.Flexible;
-
-        // Adjust grid cell size and spacing as needed
-        gridLayoutGroup.cellSize = new Vector2(450, 130); // Adjust to your desired button size
-        gridLayoutGroup.spacing = new Vector2(10, 10); // Adjust for spacing between buttons
-
-        // Setting container to the new grid parent
-        //container = gridParent.transform;
-        Transform shopItemTransform = Instantiate(shopItemTemplate);
-        RectTransform shopItemRectTransform = shopItemTransform.GetComponent<RectTransform>();
-        shopItemTransform.transform.SetParent(gridParent.transform, false);
-
-
         CreateItemButton(SItem.ItemType.CarrotSeeds, SItem.GetSprite(SItem.ItemType.CarrotSeeds), "Carrot Seeds", SItem.GetCost(SItem.ItemType.CarrotSeeds), 0);
 
-        CreateItemButton(SItem.ItemType.CarrotSeeds, SItem.GetSprite(SItem.ItemType.CarrotSeeds), "Carrot Seeds", SItem.GetCost(SItem.ItemType.CarrotSeeds), 1);
-        /*
-        CreateItemButton(SItem.ItemType.Armor_1, SItem.GetSprite(SItem.ItemType.Armor_1), "Armor 1", SItem.GetCost(SItem.ItemType.Armor_1), 0);
-        CreateItemButton(SItem.ItemType.Armor_2, SItem.GetSprite(SItem.ItemType.Armor_2), "Armor 2", SItem.GetCost(SItem.ItemType.Armor_2), 1);
-        CreateItemButton(SItem.ItemType.Helmet, SItem.GetSprite(SItem.ItemType.Helmet), "Helmet", SItem.GetCost(SItem.ItemType.Helmet), 2);
-        CreateItemButton(SItem.ItemType.Sword_2, SItem.GetSprite(SItem.ItemType.Sword_2), "Sword", SItem.GetCost(SItem.ItemType.Sword_2), 3);
-        CreateItemButton(SItem.ItemType.HealthPotion, SItem.GetSprite(SItem.ItemType.HealthPotion), "HealthPotion", SItem.GetCost(SItem.ItemType.HealthPotion), 4);*/
+        CreateItemButton(SItem.ItemType.TomatoSeeds, SItem.GetSprite(SItem.ItemType.TomatoSeeds), "Tomato Seeds", SItem.GetCost(SItem.ItemType.TomatoSeeds), 1);
+
+        CreateItemButton(SItem.ItemType.RadishSeeds, SItem.GetSprite(SItem.ItemType.RadishSeeds), "Radish Seeds", SItem.GetCost(SItem.ItemType.RadishSeeds), 2);
+
+        CreateItemButton(SItem.ItemType.CornSeeds, SItem.GetSprite(SItem.ItemType.CornSeeds), "Corn Seeds", 
+            SItem.GetCost(SItem.ItemType.CornSeeds), 3);
+
+        CreateItemButton(SItem.ItemType.CabbageSeeds, SItem.GetSprite(SItem.ItemType.CabbageSeeds), "Cabbage Seeds", SItem.GetCost(SItem.ItemType.CabbageSeeds), 4);
+
+        CreateItemButton(SItem.ItemType.RedRoseSeeds, SItem.GetSprite(SItem.ItemType.RedRoseSeeds), "Red Rose Seeds", SItem.GetCost(SItem.ItemType.RedRoseSeeds), 5);
+
+        CreateItemButton(SItem.ItemType.HeliopsisSeeds, SItem.GetSprite(SItem.ItemType.HeliopsisSeeds), "Heliopsis Seeds", SItem.GetCost(SItem.ItemType.HeliopsisSeeds), 6);
+
+        CreateItemButton(SItem.ItemType.DaffodilSeeds, SItem.GetSprite(SItem.ItemType.DaffodilSeeds), "Daffodil Seeds", SItem.GetCost(SItem.ItemType.DaffodilSeeds), 7);
 
         //Hide();
     }
@@ -63,12 +70,6 @@ public class UI_Shop : MonoBehaviour
         Transform shopItemTransform = Instantiate(shopItemTemplate, container);
         shopItemTransform.gameObject.SetActive(true);
         RectTransform shopItemRectTransform = shopItemTransform.GetComponent<RectTransform>();
-
-        //button.transform.SetParent(gridParent.transform, false);
-        /*
-        float shopItemHeight = 90f;
-        shopItemRectTransform.anchoredPosition = new Vector2(0, -shopItemHeight * positionIndex);
-        */
 
         // Updating UI elements with item details
         shopItemTransform.Find("nameText").GetComponent<TextMeshProUGUI>().SetText(itemName);
@@ -89,13 +90,13 @@ public class UI_Shop : MonoBehaviour
         if (CurrencySystem.Instance.TrySpendCurrency(itemCost, CurrencyType.Silver))
         {
             // Successfully purchased item
-            Debug.Log($"Successfully bought {itemType} for {itemCost} gold.");
+            Debug.Log($"UI_Shop.cs: Successfully bought {itemType} for {itemCost} gold.");
             // Inform the customer (if needed)
             //shopCustomer.BoughtItem(itemType);
         }
         else
         {
-            Debug.Log("Not enough silver!");
+            Debug.Log("UI_Shop.cs: Not enough silver!");
             // Display a message or tooltip for insufficient funds
         }
     }

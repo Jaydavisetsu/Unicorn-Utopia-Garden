@@ -21,10 +21,7 @@ namespace WorldTime
             worldTime.WorldTimeChanged += CheckSchedule; // Subscribe to the WorldTimeChanged event
 
         }
-        private void Start()
-        {
-            //worldTime.WorldTimeChanged += CheckSchedule; // Subscribe to the WorldTimeChanged event
-        }
+
         private void OnDestroy()
         {
             worldTime.WorldTimeChanged -= CheckSchedule;

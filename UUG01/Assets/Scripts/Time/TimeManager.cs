@@ -69,7 +69,7 @@ public class TimeManager : MonoBehaviour, IDataPersistence
     {
         if (timestamp == null)
         {
-            timestamp = new GameTimestamp(0, GameTimestamp.Season.Spring, 1, 6, 0); // Initialise the time stamp.
+            timestamp = new GameTimestamp(0, GameTimestamp.Season.Spring, 1, 06, 0); // Initialise the time stamp.
         }
         else if (Instance != null)
         {

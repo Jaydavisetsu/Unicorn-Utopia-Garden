@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Reflection;
+using System.Collections.Generic;
+using UnityEngine.InputSystem.Utilities;
 //using V_AnimationSystem;
 
 public class GameAssets : MonoBehaviour
@@ -18,6 +20,13 @@ public class GameAssets : MonoBehaviour
 
 
     public Sprite s_CarrotSeed;
+    public Sprite s_CabbageSeeds;
+    public Sprite s_TomatoSeeds;
+    public Sprite s_RadishSeeds;
+    public Sprite s_CornSeeds;
+    public Sprite s_RedRoseSeeds;
+    public Sprite s_HeliopsisSeeds;
+    public Sprite s_DaffodilSeeds;
 
     /*
     public Sprite s_ShootFlash;

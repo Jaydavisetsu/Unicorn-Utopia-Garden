@@ -57,6 +57,10 @@ public class GameTimestamp // This class manages the in-game time. It is differe
             // Reset hours.
             hour = 1;
             day++;
+
+            // This is only for level one to two.
+            XPAddedGameEvent info = new XPAddedGameEvent(5);
+            EventManager.Instance.QueueEvent(info);
         }
         
         // 30 days in a season.

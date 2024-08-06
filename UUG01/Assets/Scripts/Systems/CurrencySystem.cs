@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CurrencySystem : MonoBehaviour, IDataPersistence
@@ -9,6 +11,13 @@ public class CurrencySystem : MonoBehaviour, IDataPersistence
 
     // All player's treasures.
     private static Dictionary<CurrencyType, int> CurrencyAmounts = new Dictionary<CurrencyType, int>();
+
+    // Prefab for xp rewards when buying
+    [SerializeField] private GameObject XpDisplayPrefab;
+    private TextMeshProUGUI XpRewardAmountText;
+
+    // Prefab for not enough currency when buying
+    [SerializeField] private GameObject NotEnoughtCurrencyPrefab;
 
     // Currency texts.
     [SerializeField] private List<GameObject> texts;
@@ -40,6 +49,8 @@ public class CurrencySystem : MonoBehaviour, IDataPersistence
             CurrencyAmounts.Add((CurrencyType)i, 0);
             currencyTexts.Add((CurrencyType)i, texts[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>());
         }
+
+        XpRewardAmountText = XpDisplayPrefab.transform.Find("XpRewardAmountText").GetComponent<TextMeshProUGUI>();
     }
     public void LoadData(GameData data) //Method from IDataPersistence.
     {
@@ -64,7 +75,7 @@ public class CurrencySystem : MonoBehaviour, IDataPersistence
         if (!CurrencyAmounts.ContainsKey(CurrencyType.Silver))
         {
             // If not present, initialize Silver to 100
-            CurrencyAmounts[CurrencyType.Silver] = 100;
+            CurrencyAmounts[CurrencyType.Silver] = 80;
         }
 
         //pdate UI texts to reflect the right amount
@@ -82,7 +93,7 @@ public class CurrencySystem : MonoBehaviour, IDataPersistence
         }
     }
 
-    // This might not be needed?
+    //This might not be needed?
     private void Start()
     {
         //add listeners for currency change events and not enough currency
@@ -93,8 +104,8 @@ public class CurrencySystem : MonoBehaviour, IDataPersistence
     private void UpdateUI()
     {
         // This might not be needed?
-        /*
-        //set new currency amounts
+        
+        /*//set new currency amounts
         for (int i = 0; i < texts.Count; i++)
         {
             currencyTexts[(CurrencyType)i].text = CurrencyAmounts[(CurrencyType)i].ToString();
@@ -105,27 +116,34 @@ public class CurrencySystem : MonoBehaviour, IDataPersistence
             if (currencyTexts.ContainsKey(kvp.Key))
             {
                 currencyTexts[kvp.Key].text = kvp.Value.ToString();
-                Debug.Log($"Updated UI for {kvp.Key}: {kvp.Value}");
+                Debug.Log($"CurrencySystem.cs: Updated UI for {kvp.Key}: {kvp.Value}");
             }
         }
     }
 
-    public bool TrySpendCurrency(int spendAmount, CurrencyType currencyType)
+    public bool TrySpendCurrency(int spendAmount, CurrencyType currencyType) // This is to use with the market.
     {
-        Debug.Log($"Attempting to spend {spendAmount} of {currencyType}");
+        Debug.Log($"CurrencySystem.cs: Attempting to spend {spendAmount} of {currencyType}");
 
         if (CurrencyAmounts.ContainsKey(currencyType) && CurrencyAmounts[currencyType] >= spendAmount)
         {
             CurrencyAmounts[currencyType] -= spendAmount;
 
-            Debug.Log($"Spent {spendAmount} of {currencyType}. New amount: {CurrencyAmounts[currencyType]}");
+            Debug.Log($"CurrencySystem.cs: Spent {spendAmount} of {currencyType}. New amount: {CurrencyAmounts[currencyType]}");
 
             UpdateUI();
+
+            // This is only for level one to two.
+            XPAddedGameEvent info = new XPAddedGameEvent(18);
+            EventManager.Instance.QueueEvent(info);
+            ActivateForDuration(1f, 18);
+
             return true;
         }
         else
         {
-            Debug.Log($"Not enough {currencyType}. Current amount: {CurrencyAmounts[currencyType]}");
+            ActivateForDuration(2f);
+            Debug.Log($"CurrencySystem.cs: Not enough {currencyType}. Current amount: {CurrencyAmounts[currencyType]}");
 
             return false;
         }
@@ -140,10 +158,50 @@ public class CurrencySystem : MonoBehaviour, IDataPersistence
         }
     }
 
-    // This might not be needed. These are the original methods.
+    // This method can be called to activate the XpRewardPrefab for a specific duration
+    public void ActivateForDuration(float duration, int xpreward)
+    {
+        // Start the coroutine with the specified duration
+        StartCoroutine(ActivateForTime(duration, xpreward));
+    }
+
+    private IEnumerator ActivateForTime(float duration, int xpreward)
+    {
+        // Ensure the GameObject is active
+        XpDisplayPrefab.SetActive(true);
+
+        XpRewardAmountText.text = xpreward.ToString();
+
+        // Wait for the specified duration
+        yield return new WaitForSeconds(duration);
+
+        // Deactivate the GameObject
+        XpDisplayPrefab.SetActive(false);
+    }
+
+    // This method can be called to activate the NotEnoughCurrencyPrefab for a specific duration
+    public void ActivateForDuration(float duration)
+    {
+        // Start the coroutine with the specified duration
+        StartCoroutine(ActivateForTime(duration));
+    }
+
+    private IEnumerator ActivateForTime(float duration)
+    {
+        // Ensure the GameObject is active
+        NotEnoughtCurrencyPrefab.SetActive(true);
+
+        // Wait for the specified duration
+        yield return new WaitForSeconds(duration);
+
+        // Deactivate the GameObject
+        NotEnoughtCurrencyPrefab.SetActive(false);
+    }
+
+    //This might not be needed. These are the original methods.
     private void OnCurrencyChange(CurrencyChangeGameEvent info)
     {
-        //if the player's trying to spend currency
+        /*//if the player's trying to spend currency
         if (info.amount < 0)
         {
             if (CurrencyAmounts[info.currencyType] < Math.Abs(info.amount))
@@ -153,19 +211,17 @@ public class CurrencySystem : MonoBehaviour, IDataPersistence
             }
 
             EventManager.Instance.QueueEvent(new EnoughCurrencyGameEvent());
-        }
+        }*/
 
-        // Change currency amount
         CurrencyAmounts[info.currencyType] += info.amount;
-        
-        // Update currency texts
+
         UpdateUI();
     }
 
     private void OnNotEnough(NotEnoughCurrencyGameEvent info)
     {
         // Display that the player doesn't have any currency
-        Debug.Log($"You don't have enough of {info.amount} {info.currencyType}");
+        Debug.Log($"CurrencySystem.cs (OnNotEnough): You don't have enough of {info.amount} {info.currencyType}");
     }
 }
 
