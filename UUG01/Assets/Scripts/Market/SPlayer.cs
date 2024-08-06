@@ -34,19 +34,7 @@ public class SPlayer : MonoBehaviour, IShopCustomer
         switch (itemType)
         {
             //case SItem.ItemType.CarrotSeeds: /*EquipArmorNone()*/; break;
-            case SItem.ItemType.CarrotSeeds:
-
-                // Example: Deducting gold when buying CarrotSeeds
-                if (CurrencySystem.Instance.TrySpendCurrency(SItem.GetCost(itemType), CurrencyType.Silver))
-                {
-                    // Process item purchase logic here
-                }
-                else
-                {
-                    Debug.Log("Not enough gold!");
-                }
-                break;
-                // Add cases for other item types as needed
+            case SItem.ItemType.CarrotSeeds: break;
         }
     }
 

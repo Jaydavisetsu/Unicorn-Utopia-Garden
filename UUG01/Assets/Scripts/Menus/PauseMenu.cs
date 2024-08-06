@@ -68,7 +68,6 @@ public class PauseMenu : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX("Selecting");
 
-        DataPersistenceManager.Instance.SaveGame();
         Application.Quit();
     }
 }

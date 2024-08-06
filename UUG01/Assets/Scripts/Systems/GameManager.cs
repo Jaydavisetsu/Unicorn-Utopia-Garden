@@ -15,7 +15,9 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (current != null && current != this)
+        //initialize fields
+        current = this;
+        /*if (current != null && current != this)
         {
             Destroy(this.gameObject);
         }
@@ -23,11 +25,11 @@ public class GameManager : MonoBehaviour
         {
             //initialize fields
             current = this;
-        }
+        }*/
 
         // Reparenting the GameObject AudioManager because DontDestroyOnLoad only works on root GameObjects and not child game objects.
         //current.transform.SetParent(null); // Making it a root GameObject.
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         
         itemManager = GetComponent<ItemManager>();
         tileManager = GetComponent<TileManager>();

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SaveSlotsMenu : MonoBehaviour
+public class SaveSlotsMenu : Menu
 {
     [Header("Menu Navigation")]
     [SerializeField] private MainMenu mainMenu;
@@ -13,7 +13,7 @@ public class SaveSlotsMenu : MonoBehaviour
     [SerializeField] private Button backButton;
 
     [Header("Confirmation Popup")]
-    [SerializeField] private ConfirmationPopup confirmationPopupMenu;
+    [SerializeField] private ConfirmationPopupMenu confirmationPopupMenu;
 
     private SaveSlot[] saveSlots;
 
@@ -26,7 +26,7 @@ public class SaveSlotsMenu : MonoBehaviour
 
     public void OnSaveSlotClicked(SaveSlot saveSlot)
     {
-        // Disable all buttons.
+        // disable all buttons
         DisableMenuButtons();
 
         // case - loading game
@@ -101,7 +101,7 @@ public class SaveSlotsMenu : MonoBehaviour
         // set mode
         this.isLoadingGame = isLoadingGame;
 
-        // Load all of the profiles that exist.
+        // load all of the profiles that exist
         Dictionary<string, GameData> profilesGameData = DataPersistenceManager.Instance.GetAllProfilesGameData();
 
         // ensure the back button is enabled when we activate the menu
@@ -114,7 +114,6 @@ public class SaveSlotsMenu : MonoBehaviour
             GameData profileData = null;
             profilesGameData.TryGetValue(saveSlot.GetProfileId(), out profileData);
             saveSlot.SetData(profileData);
-            
             if (profileData == null && isLoadingGame)
             {
                 saveSlot.SetInteractable(false);
@@ -122,18 +121,23 @@ public class SaveSlotsMenu : MonoBehaviour
             else
             {
                 saveSlot.SetInteractable(true);
+                if (firstSelected.Equals(backButton.gameObject))
+                {
+                    firstSelected = saveSlot.gameObject;
+                }
             }
         }
 
         // set the first selected button
-        //Button firstSelectedButton = firstSelected.GetComponent<Button>();
-        //this.SetFirstSelected(firstSelectedButton);
+        Button firstSelectedButton = firstSelected.GetComponent<Button>();
+        this.SetFirstSelected(firstSelectedButton);
     }
 
     public void DeactivateMenu()
     {
         this.gameObject.SetActive(false);
     }
+
     private void DisableMenuButtons()
     {
         foreach (SaveSlot saveSlot in saveSlots)

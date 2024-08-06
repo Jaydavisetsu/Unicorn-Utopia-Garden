@@ -19,6 +19,8 @@ public class GameData
     public long lastUpdated; // Used to timestamp for the filehandler.
 
     public Vector2 PlayerPosition; // From PlayerMovement.cs
+    public float xPosition = 21.1f; // The x axis that the object can be placed
+    public float yPosition = -7.94f; // The y axis that the object can be placed
 
     public Dictionary<CurrencyType, int> CurrencyAmounts; // From CurrencySystem.cs
 
@@ -39,8 +41,8 @@ public class GameData
 
     public GameData() //The values defined in their constructor will be the default value, so the game starts with when there is no data to load.
     {
-        //this.deathCount = 0
-        PlayerPosition = Vector2.zero;
+        PlayerPosition = new Vector2(xPosition, yPosition);
+
         CurrencyAmounts = new Dictionary<CurrencyType, int>();
 
         XPNow = 0;

@@ -45,3 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s_CarrotSeed: {fileID: 622413858, guid: 5c6c57c1e46d0624592439972fb59251, type: 3}
+  s_CabbageSeeds: {fileID: 148324978, guid: 5c6c57c1e46d0624592439972fb59251, type: 3}
+  s_TomatoSeeds: {fileID: -1985250081, guid: 5c6c57c1e46d0624592439972fb59251, type: 3}
+  s_RadishSeeds: {fileID: 715884838, guid: 5c6c57c1e46d0624592439972fb59251, type: 3}
+  s_CornSeeds: {fileID: 1434767831, guid: 5c6c57c1e46d0624592439972fb59251, type: 3}
+  s_RedRoseSeeds: {fileID: 428044214, guid: 5c6c57c1e46d0624592439972fb59251, type: 3}
+  s_HeliopsisSeeds: {fileID: -1308916144, guid: 5c6c57c1e46d0624592439972fb59251, type: 3}
+  s_DaffodilSeeds: {fileID: -1251639152, guid: 5c6c57c1e46d0624592439972fb59251, type: 3}

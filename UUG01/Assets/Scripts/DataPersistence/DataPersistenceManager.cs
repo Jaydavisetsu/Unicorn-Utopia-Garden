@@ -144,7 +144,7 @@ public class DataPersistenceManager : MonoBehaviour
         {
             dataPersistenceObj.LoadData(GameData);
         }
-        //Debug.Log("Loaded positions" + GameData.PlayerPosition.ToString()); //CAN REMOVE
+        Debug.Log("Loaded positions" + GameData.PlayerPosition.ToString()); //CAN REMOVE
     }
 
     public void SaveGame()
@@ -181,8 +181,7 @@ public class DataPersistenceManager : MonoBehaviour
     private List<IDataPersistence> FindAllDataPersistenceObjects()
     {
         // FindObjectsofType takes in an optional boolean to include inactive gameobjects
-        IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>(true)
-            .OfType<IDataPersistence>();//System.Linq helps find all scripts that implement the IDataPersistence interface and are seen. Scripts need to extend in monobehavior to be found.
+        IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>(true).OfType<IDataPersistence>();//System.Linq helps find all scripts that implement the IDataPersistence interface and are seen. Scripts need to extend in monobehavior to be found.
 
         return new List<IDataPersistence>(dataPersistenceObjects); //Returning a new list and passing in the result of that call to initialize the list.
     }
