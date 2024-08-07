@@ -44,7 +44,9 @@ public class SaveSlotsMenu : Menu
                 () => {
                     DataPersistenceManager.Instance.ChangeSelectedProfileId(saveSlot.GetProfileId());
                     DataPersistenceManager.Instance.NewGame();
-                    SaveGameAndLoadScene();
+                    DataPersistenceManager.Instance.SaveGame();
+                    SceneManager.LoadSceneAsync("FirstCutScene");
+                    //SaveGameAndLoadScene();
                 },
                 // function to execute if we select 'cancel'
                 () => {
@@ -57,7 +59,9 @@ public class SaveSlotsMenu : Menu
         {
             DataPersistenceManager.Instance.ChangeSelectedProfileId(saveSlot.GetProfileId());
             DataPersistenceManager.Instance.NewGame();
-            SaveGameAndLoadScene();
+            DataPersistenceManager.Instance.SaveGame();
+            SceneManager.LoadSceneAsync("FirstCutScene");
+            //SaveGameAndLoadScene();
         }
     }
 

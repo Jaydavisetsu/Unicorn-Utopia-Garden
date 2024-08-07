@@ -1,46 +1,29 @@
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class VideoController : MonoBehaviour
 {
-    public VideoPlayer videoPlayer;
-    public GameObject characterPrefab1;
-    public GameObject characterPrefab2;
-    public Transform spawnLocation1;
-    public Transform spawnLocation2;
+    public VideoPlayer videoPlayer;  // Reference to the VideoPlayer component
 
-    private bool videoPlayed = false;
+    public string nextSceneName;     // Name of the next scene to load after the video ends
 
-    void Start()
+
+    public void Awake()
     {
-        if (videoPlayer != null)
-        {
-            videoPlayer.loopPointReached += OnVideoEnd; // Subscribe to the event when the video finishes
-            videoPlayer.Play(); // Start playing the video
-        }
+        // Subscribe to the video player's loopPointReached event
+        videoPlayer.loopPointReached += EndReached;
+
+        // Start playing the video
+        videoPlayer.Play();
     }
 
-    void OnVideoEnd(VideoPlayer vp)
+    void EndReached(VideoPlayer vp)
     {
-        if (!videoPlayed)
-        {
-            videoPlayed = true; // Ensure this is only called once
-            SpawnCharacters();
-        }
-    }
-
-    void SpawnCharacters()
-    {
-        if (characterPrefab1 != null && spawnLocation1 != null)
-        {
-            Instantiate(characterPrefab1, spawnLocation1.position, spawnLocation1.rotation);
-        }
-
-        if (characterPrefab2 != null && spawnLocation2 != null)
-        {
-            Instantiate(characterPrefab2, spawnLocation2.position, spawnLocation2.rotation);
-        }
+        // Load the next scene
+        SceneManager.LoadSceneAsync("Level1");
     }
 }
+
 
 
