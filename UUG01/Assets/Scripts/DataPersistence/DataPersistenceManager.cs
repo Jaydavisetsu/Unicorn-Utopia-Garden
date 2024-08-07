@@ -26,7 +26,7 @@ public class DataPersistenceManager : MonoBehaviour
     [Header("Auto Saving Configuration")]
     [SerializeField] private float autoSaveTimeSeconds = 10f;
 
-    private GameData GameData; //Class that stoes the state of the game.
+    private GameData GameData; //Class that stores the state of the game.
     private List<IDataPersistence> DataPersistenceObjects; //When this manager starts, it will gather and store a reference to each IDataPersistence script in a list so that we can call scripts when we save and load the game.
     private FileDataHandler DataHandler;
 
