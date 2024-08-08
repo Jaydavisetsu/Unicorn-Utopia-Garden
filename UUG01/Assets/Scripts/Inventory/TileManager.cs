@@ -58,7 +58,7 @@ public class TileManager : MonoBehaviour
     void CallMethodOnce()
     {
         ExampleCoroutine();
-        Debug.Log("doing the recievexoncemethod");
+        //Debug.Log("doing the recievexoncemethod");
 
         if (interactableMap.ContainsTile(plowedTile))
         {
