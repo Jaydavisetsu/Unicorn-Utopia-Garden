@@ -7,7 +7,7 @@ public class CameraShakeManager : MonoBehaviour
 {
     public static CameraShakeManager instance;
 
-    [SerializeField] private float globalShakeForce = 1f;
+    [SerializeField] private float globalShakeForce = 2f;
 
     private void Awake()
     {

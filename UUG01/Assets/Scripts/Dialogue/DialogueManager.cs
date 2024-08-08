@@ -69,6 +69,9 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 
+        questOne.SetActive(false);
+        questTwo.SetActive(false);
+
         // get all of the choices text 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -119,6 +122,22 @@ public class DialogueManager : MonoBehaviour
             Quest3Show();
         });
 
+        currentStory.BindExternalFunction("DoNotShowFirstQuest", () =>
+        {
+            Quest1Stop();
+        });
+
+        currentStory.BindExternalFunction("DoNotShowSecondQuest", () =>
+        {
+            Quest2Stop();
+        });
+
+        currentStory.BindExternalFunction("DoNotShowThirdQuest", () =>
+        {
+            Quest3Stop();
+        });
+
+
         currentStory.BindExternalFunction("PlayDragonCut", () =>
         {
             DragonCut();
@@ -136,16 +155,29 @@ public class DialogueManager : MonoBehaviour
         questOne.SetActive(true);
     }
 
+    private void Quest1Stop()
+    {
+        questOne.SetActive(false);
+    }
+
     private void Quest2Show()
     {
         questTwo.SetActive(true);
+    }
+
+    private void Quest2Stop()
+    {
+        questTwo.SetActive(false);
     }
 
     private void Quest3Show()
     {
         questThree.SetActive(true);
     }
-
+    private void Quest3Stop()
+    {
+        questThree.SetActive(false);
+    }
     private void DragonCut()
     {
         AudioManager.Instance.PlayDragonLevel1Ending(); // To call the dragon scene!!!
@@ -159,6 +191,11 @@ public class DialogueManager : MonoBehaviour
         currentStory.UnbindExternalFunction("ShowFirstQuest");
         currentStory.UnbindExternalFunction("ShowSecondQuest");
         currentStory.UnbindExternalFunction("ShowThirdQuest");
+
+        currentStory.UnbindExternalFunction("DoNotShowFirstQuest");
+        currentStory.UnbindExternalFunction("DoNotShowSecondQuest");
+        currentStory.UnbindExternalFunction("DoNotShowThirdQuest");
+
         currentStory.UnbindExternalFunction("PlayDragonCut");
 
         dialogueIsPlaying = false;
@@ -340,17 +377,17 @@ public class DialogueManager : MonoBehaviour
         dialogueVariables.variables.TryGetValue(variableName, out variableValue);
         if (variableValue == null)
         {
-            Debug.Log("Ink Variable was found to be null: " + variableName);
+            Debug.LogWarning("Ink Variable was found to be null: " + variableName);
         }
         return variableValue;
     }
 
+    // This method will get called anytime the application exits.
+    // Depending on your game, you may want to save variable state in other places.
     public void OnApplicationQuit()
     {
-        if (dialogueVariables != null)
-        {
-            dialogueVariables.SaveVariables();
-        }
+        dialogueVariables.SaveVariables();
     }
+
 }
 // Source: https://www.youtube.com/watch?v=vY0Sk93YUhA&list=PL3viUl9h9k78KsDxXoAzgQ1yRjhm7p8kl&index=2
