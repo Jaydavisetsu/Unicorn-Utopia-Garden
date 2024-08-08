@@ -62,7 +62,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 400
+      m_SerializableObject: 500
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -118,7 +118,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 15
+      m_SerializableObject: 10
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -1626,7 +1626,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 400
+      m_SerializableObject: 500
     m_Space: 2147483647
   m_Property:
     name: o
@@ -2151,7 +2151,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.AABox, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"center":{"x":-18.42340850830078,"y":0.2516822814941406,"z":0.0},"size":{"x":122.60836791992188,"y":83.87357330322266,"z":1.0}}'
+      m_SerializableObject: '{"center":{"x":-17.704429626464845,"y":0.2516822814941406,"z":0.0},"size":{"x":121.17041015625,"y":83.87357330322266,"z":1.0}}'
     m_Space: 0
   m_Property:
     name: Box
@@ -2614,7 +2614,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 15
+      m_SerializableObject: 10
     m_Space: 2147483647
   m_Property:
     name: o
@@ -3889,7 +3889,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.TSphere, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"transform":{"position":{"x":-35.34543228149414,"y":0.0,"z":0.0},"angles":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0}},"radius":21.589969635009767}'
+      m_SerializableObject: '{"transform":{"position":{"x":-34.12677764892578,"y":0.0,"z":0.0},"angles":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0}},"radius":21.589969635009767}'
     m_Space: 0
   m_Property:
     name: sphere
@@ -4397,7 +4397,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 2.5
+      m_SerializableObject: 3
     m_Space: 2147483647
   m_Property:
     name: Bounce
@@ -5411,7 +5411,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Sphere, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"center":{"x":-36.7281494140625,"y":-9.952472686767579,"z":0.0},"radius":1.0}'
+      m_SerializableObject: '{"center":{"x":-28.623046875,"y":-9.952472686767579,"z":0.0},"radius":2.0}'
     m_Space: 0
   m_Property:
     name: Sphere

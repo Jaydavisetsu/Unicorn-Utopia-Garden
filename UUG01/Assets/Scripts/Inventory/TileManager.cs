@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -8,6 +10,8 @@ public class TileManager : MonoBehaviour
     public Tilemap interactableMap;
     public Tile hiddenInteractableTile;
     public Tile plowedTile;
+
+    private bool hasCalledOnce;
 
     void Start()
     {
@@ -20,6 +24,7 @@ public class TileManager : MonoBehaviour
                 interactableMap.SetTile(position, hiddenInteractableTile);
             }
         }
+        CallMethodOnce();
     }
 
     public void SetInteracted(Vector3Int position)
@@ -40,6 +45,38 @@ public class TileManager : MonoBehaviour
         }
 
         return "";
+    }
+
+    private void Update()
+    {
+        if (hasCalledOnce == true)
+        {
+            CallMethodOnce();
+        }
+    }
+
+    void CallMethodOnce()
+    {
+        ExampleCoroutine();
+        //Debug.Log("doing the recievexoncemethod");
+
+        if (interactableMap.ContainsTile(plowedTile))
+        {
+            XPAddedGameEvent info = new XPAddedGameEvent(5);
+            EventManager.Instance.QueueEvent(info);
+            CurrencySystem.Instance.ActivateForDuration(2f, 5);
+            Debug.Log("xp added");
+            hasCalledOnce = false;
+        }
+        else if (!interactableMap.ContainsTile(plowedTile))
+        {
+            hasCalledOnce = true;
+        }
+    }
+    IEnumerator ExampleCoroutine()
+    {
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(10);
     }
 }
 

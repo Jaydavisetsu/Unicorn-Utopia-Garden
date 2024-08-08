@@ -1,8 +1,11 @@
+using Newtonsoft.Json.Bson;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelSystem : MonoBehaviour, IDataPersistence
@@ -19,9 +22,11 @@ public class LevelSystem : MonoBehaviour, IDataPersistence
     private TextMeshProUGUI lvlText;
     private Image starImage;
 
+
     private static bool initialized;
     private static Dictionary<int, int> xpToNextLevel = new Dictionary<int, int>();
-    private static Dictionary<int, int[]> lvlReward = new Dictionary<int, int[]>();
+    //private static Dictionary<int, int[]> lvlReward = new Dictionary<int, int[]>();
+    private static Dictionary<int, int> lvlReward = new Dictionary<int, int>();
 
     private void Awake()
     {
@@ -66,12 +71,12 @@ public class LevelSystem : MonoBehaviour, IDataPersistence
 
             xpToNextLevel = new Dictionary<int, int>(lines.Length - 1);
 
-            for (int i = 1; i < lines.Length - 1; i++)
+            for (int i = 1; i < lines.Length -1; i++)
             {
                 string[] columns = lines[i].Split(',');
 
                 int lvl = -1;
-                int xp = -1;
+                int xp = - 1;
                 int curr1 = -1;
                 //int curr2 = -1;
 
@@ -85,7 +90,8 @@ public class LevelSystem : MonoBehaviour, IDataPersistence
                     if (!xpToNextLevel.ContainsKey(lvl))
                     {
                         xpToNextLevel.Add(lvl, xp);
-                        lvlReward.Add(lvl, new[] { curr1 });
+                        //lvlReward.Add(lvl, new[] { curr1 });
+                        lvlReward.Add(lvl, curr1);
                     }
                 }
             }
@@ -106,7 +112,7 @@ public class LevelSystem : MonoBehaviour, IDataPersistence
 
     private void UpdateUI()
     {
-        float fill = (float)XPNow / xpToNext;
+        float fill = (float) XPNow / xpToNext;
         slider.value = fill;
         xpText.text = XPNow + "/" + xpToNext;
         lvlText.text = Level.ToString();
@@ -128,13 +134,13 @@ public class LevelSystem : MonoBehaviour, IDataPersistence
 
     private void OnLevelChanged(LevelChangedGameEvent info)
     {
-        XPNow -= xpToNext;
+        XPNow -= XPNow;
         xpToNext = xpToNextLevel[info.newLvl];
         lvlText.text = (info.newLvl + 1).ToString();
         UpdateUI();
 
         GameObject window = Instantiate(lvlWindowPrefab, GameManagerA.current.panel.transform);
-
+        window.SetActive(true);
         //initialize texts and images here
 
         window.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(delegate
@@ -142,12 +148,7 @@ public class LevelSystem : MonoBehaviour, IDataPersistence
             Destroy(window);
         });
 
-        CurrencyChangeGameEvent currencyInfo =
-            new CurrencyChangeGameEvent(lvlReward[info.newLvl][0], CurrencyType.Silver);
-        EventManager.Instance.QueueEvent(currencyInfo);
-
-        currencyInfo =
-            new CurrencyChangeGameEvent(lvlReward[info.newLvl][1], CurrencyType.Silver);
+        CurrencyChangeGameEvent currencyInfo = new CurrencyChangeGameEvent(lvlReward[info.newLvl], CurrencyType.Silver);
         EventManager.Instance.QueueEvent(currencyInfo);
     }
 }

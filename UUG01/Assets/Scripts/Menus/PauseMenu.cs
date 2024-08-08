@@ -42,12 +42,12 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1; // Resuming the real time game.
     }
 
-    public void Save()
+    /* void Save()
     {
         AudioManager.Instance.PlaySFX("Selecting");
 
         DataPersistenceManager.Instance.SaveGame(); //From the DataPersistence Manager.
-    }
+    }*/
 
     public void Settings()
     {
@@ -60,16 +60,14 @@ public class PauseMenu : MonoBehaviour
     {
         AudioManager.Instance.PlaySFX("Selecting");
 
-        //TODO: Have to implement a warning sign if game is not saved before going to main menu.
-
-        SceneManager.LoadScene("MainMenu"); //When the main menu button is clicked, it will load the main menu
+        DataPersistenceManager.Instance.SaveGame();
+        SceneManager.LoadSceneAsync("MainMenu"); //When the main menu button is clicked, it will load the main menu
     }
 
     public void Exit()
     {
         AudioManager.Instance.PlaySFX("Selecting");
 
-        //TODO: Have to implement a warning sign if game is not saved before exiting.
         Application.Quit();
     }
 }

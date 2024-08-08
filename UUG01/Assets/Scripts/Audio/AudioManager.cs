@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using Newtonsoft.Json.Bson;
 
+using Cinemachine; // For Dragon Camera Shake
+
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance; //Creating a static instance of this code to easily access if from anywhere.
@@ -11,6 +13,8 @@ public class AudioManager : MonoBehaviour
     //Two different arrays from the sound class.
     public Sound[] MusicSounds, SfxSounds;
     public AudioSource MusicSource, SfxSource;
+
+    private CinemachineImpulseSource impluseSource;  // For Dragon Camera Shake
 
     private void Awake()
     {
@@ -27,6 +31,8 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        impluseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     private void Start()
@@ -141,6 +147,14 @@ public class AudioManager : MonoBehaviour
     public void SFXVolume(float volume)
     {
         SfxSource.volume = volume;
+    }
+
+    //-----------------------Dragon Camera Shake-------------------------------------------------------
+    public void PlayDragonLevel1Ending()
+    {
+        StopSFX();
+        CameraShakeManager.instance.CameraShake(impluseSource);
+        PlaySFX("Dragon Roar");
     }
 }
 

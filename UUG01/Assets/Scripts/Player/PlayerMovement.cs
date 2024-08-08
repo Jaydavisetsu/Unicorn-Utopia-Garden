@@ -34,8 +34,13 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         data.PlayerPosition = this.transform.position;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
         Movementm.Set(InputManager.Movement.x, InputManager.Movement.y); //Moving vecotr2.
 
         //Setting the velocity directly on the rigid body.
