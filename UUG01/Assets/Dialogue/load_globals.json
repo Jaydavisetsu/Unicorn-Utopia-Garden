@@ -1,1 +1,1 @@
-﻿{"inkVersion":21,"root":[["\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"global decl":["ev",false,{"VAR=":"visited_elara"},false,{"VAR=":"asked_about_town"},false,{"VAR=":"asked_about_farming"},false,{"VAR=":"both_quests_done"},"/ev","end",null],"#f":1}],"listDefs":{}}
+﻿{"inkVersion":21,"root":[["\n",["done",{"#f":5,"#n":"g-0"}],null],"done",{"global decl":["ev",0,{"VAR=":"visited_elara"},0,{"VAR=":"asked_about_town"},0,{"VAR=":"asked_about_farming"},0,{"VAR=":"both_quests_done"},0,{"VAR=":"nextDay"},"/ev","end",null],"#f":1}],"listDefs":{}}

@@ -40,6 +40,9 @@ public class GameData
 
     public List<Schedule> Schedule; // From WorldTimeWatcher.cs
 
+    // This will store the serialized Ink variables
+    //public Dictionary<string, SerializableInkVariable> savedVariables;
+
     public GameData() //The values defined in their constructor will be the default value, so the game starts with when there is no data to load.
     {
         PlayerPosition = new Vector2(xPosition, yPosition);
@@ -60,6 +63,9 @@ public class GameData
         Minute = 0;
 
         Schedule = new List<Schedule>();
+
+        //savedVariables = new Dictionary<string, SerializableInkVariable>();
+
     }
 }
 
